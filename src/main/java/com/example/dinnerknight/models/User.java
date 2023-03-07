@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name="users")
+@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,13 +29,21 @@ public class User {
     @Column(nullable = false)
     private boolean isCook;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
-    private List<String> foods;
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "food_user",
+            joinColumns = {@JoinColumn(name = "user_id")},
+            inverseJoinColumns = {@JoinColumn(name = "food_id")}
+    )
+    private List<Food> favFoods;
 
-    public User(){
+    @ManyToMany(mappedBy = "users")
+    private List<Food> foods;
+
+    public User() {
     }
 
-    public User(User copy){
+    public User(User copy) {
         id = copy.id;
         email = copy.email;
         username = copy.username;
@@ -55,6 +63,7 @@ public class User {
         this.isCook = isCook;
         this.foods = foods;
     }
+
     public User(long id, String username, boolean isCook, List<Food> foods) {
         this.id = id;
         this.username = username;
