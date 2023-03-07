@@ -61,14 +61,14 @@ public class User {
         this.last_name = last_name;
         this.password = password;
         this.isCook = isCook;
-        this.foods = foods;
+//        this.foods = foods;
     }
 
     public User(long id, String username, boolean isCook, List<Food> foods) {
         this.id = id;
         this.username = username;
         this.isCook = isCook;
-        this.foods = foods;
+//        this.foods = foods;
     }
 
     public long getId() {
@@ -127,11 +127,11 @@ public class User {
         isCook = cook;
     }
 
-    public List<Food> getFoods() {
-        return foods;
-    }
+//    public List<Food> getFoods() {
+//        return foods;
+//    }
 
-    public void setFoods(List<Food> foods) {
-        this.foods = foods;
-    }
+//    public void setFoods(List<Food> foods) {
+//        this.foods = foods;
+//    }
 }
