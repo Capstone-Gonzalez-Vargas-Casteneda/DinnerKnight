@@ -2,6 +2,8 @@ package com.example.dinnerknight.models;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 public class Group {
 
@@ -19,6 +21,9 @@ public class Group {
 
     @Column(nullable = false)
     private String description;
+
+//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "group")
+//    private List<Event> events;
 
     public Group(){}
 

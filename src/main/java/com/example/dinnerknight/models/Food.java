@@ -12,7 +12,7 @@ public class Food {
     private Long id;
     @Column(nullable = false)
     private String name;
-    @ElementCollection
+    @Column
     private List<String> ingredients;
     @Column(nullable = false)
     private String instructions;
