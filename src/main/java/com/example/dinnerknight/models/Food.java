@@ -1,6 +1,7 @@
 package com.example.dinnerknight.models;
 
 import jakarta.persistence.*;
+import jdk.jfr.Event;
 
 import java.util.List;
 
@@ -12,24 +13,20 @@ public class Food {
     private Long id;
     @Column(nullable = false)
     private String name;
-    @ElementCollection
-    private List<String> ingredients;
-    @Column(nullable = false)
+    @Column(length = 1000)
+    private String ingredients;
+    @Column(nullable = false, length = 1000)
     private String instructions;
+
+//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "food")
+//    private List<Event> events;
+
 
     public Food(){
 
     }
 
-    public Food(Food copy) {
-        this.id = copy.id;
-        this.name = copy.name;
-        this.ingredients = copy.ingredients;
-        this.instructions = copy.instructions;
-
-    }
-
-    public Food(Long id, String name, List<String> ingredients, String instructions) {
+    public Food(Long id, String name, String ingredients, String instructions) {
         this.id = id;
         this.name = name;
         this.ingredients = ingredients;
@@ -44,11 +41,19 @@ public class Food {
         this.id = id;
     }
 
-    public List<String> getIngredients() {
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getIngredients() {
         return ingredients;
     }
 
-    public void setIngredients(List<String> ingredients) {
+    public void setIngredients(String ingredients) {
         this.ingredients = ingredients;
     }
 
