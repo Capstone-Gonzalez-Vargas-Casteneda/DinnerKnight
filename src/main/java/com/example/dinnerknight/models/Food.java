@@ -13,6 +13,7 @@ public class Food {
     private Long id;
     @Column(nullable = false)
     private String name;
+
     @Column(length = 1000)
     private String ingredients;
     @Column(nullable = false, length = 1000)
