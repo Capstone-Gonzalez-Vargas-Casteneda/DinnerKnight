@@ -29,16 +29,14 @@ public class User {
     @Column(nullable = false)
     private boolean isCook;
 
-//    @ManyToMany(cascade = CascadeType.ALL)
-//    @JoinTable(
-//            name = "food_user",
-//            joinColumns = {@JoinColumn(name = "user_id")},
-//            inverseJoinColumns = {@JoinColumn(name = "food_id")}
-//    )
-//    private List<Food> favFoods;
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "food_user",
+            joinColumns = {@JoinColumn(name = "user_id")},
+            inverseJoinColumns = {@JoinColumn(name = "food_id")}
+    )
+    private List<Food> foods;
 
-//    @ManyToMany(mappedBy = "users")
-//    private List<Food> foods;
 
     public User() {
     }
