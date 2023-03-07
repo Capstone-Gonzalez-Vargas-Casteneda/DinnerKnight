@@ -1,7 +1,6 @@
 package com.example.dinnerknight.models;
 
 import jakarta.persistence.*;
-import jdk.jfr.Event;
 
 import java.util.List;
 
@@ -19,8 +18,11 @@ public class Food {
     @Column(nullable = false, length = 1000)
     private String instructions;
 
-//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "food")
-//    private List<Event> events;
+    @ManyToMany(mappedBy = "foods")
+    private List<User> users;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "food")
+    private List<Event> events;
 
 
     public Food(){

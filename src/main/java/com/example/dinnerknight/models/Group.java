@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
+@Table(name = "groups")
 public class Group {
 
     @Id
@@ -16,14 +17,15 @@ public class Group {
 
     @Column(nullable = false)
     private String address;
+
     @Column(nullable = false)
     private long cook_id;
 
     @Column(nullable = false)
     private String description;
 
-//    @OneToMany(cascade = CascadeType.ALL, mappedBy = "group")
-//    private List<Event> events;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "group")
+    private List<Event> events;
 
     public Group(){}
 

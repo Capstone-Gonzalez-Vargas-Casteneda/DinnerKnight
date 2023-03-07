@@ -3,10 +3,14 @@ package com.example.dinnerknight.models;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "events")
 public class Event {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
+    @Column(nullable = false)
     private String name;
 
     @Column(nullable = false)
@@ -33,7 +37,8 @@ public class Event {
         this.food = copy.food;
     }
 
-    public Event(String name, String address, String description, Group group, Food food) {
+    public Event(long id, String name, String address, String description, Group group, Food food) {
+        this.id = id;
         this.name = name;
         this.address = address;
         this.description = description;
@@ -47,6 +52,14 @@ public class Event {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getAddress() {
