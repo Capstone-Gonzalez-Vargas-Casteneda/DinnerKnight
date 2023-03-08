@@ -8,31 +8,26 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class UserController {
 
     private final UserRepository userDao;
 
-    private final PackRepository packDao;
-
     private final PasswordEncoder passwordEncoder;
 
-    public UserController(UserRepository userDao,PackRepository packDao, PasswordEncoder passwordEncoder) {
+    public UserController(UserRepository userDao, PasswordEncoder passwordEncoder) {
         this.userDao = userDao;
-        this.packDao = packDao;
         this.passwordEncoder = passwordEncoder;
     }
 
     @GetMapping("/register")
-    public String registrationForm(Model model){
+    public String registrationForm(Model model) {
         model.addAttribute("user", new User());
         return "users/register";
     }
+
     @PostMapping("/register")
     public String saveUser(@ModelAttribute User user) {
         String hashPassword = passwordEncoder.encode(user.getPassword());
@@ -40,8 +35,20 @@ public class UserController {
         userDao.save(user);
         return "redirect:/login";
     }
+
+    @GetMapping("/login")
+    public String loginInForm() {
+        return "login";
+    }
+    @PostMapping("/login")
+    public String loginProcess(@RequestParam String username, @RequestParam String password){
+        if (username.equals("admin") && password.equals("password")) {
+            return "redirect:/landing";
+        }
+    }
+
     @GetMapping("/profile")
-    public String showProfile(){
+    public String showProfile() {
         return "users/profile";
     }
 
@@ -49,7 +56,6 @@ public class UserController {
 //    public String editUserProfile(Model model @PathVariable long id) {
 //        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 //        Pack pack = packDao.findPackById(id);
-//
 //        return "users/edit";
 //    }
 //
