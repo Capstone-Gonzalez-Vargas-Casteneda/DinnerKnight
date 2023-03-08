@@ -26,11 +26,12 @@ public class PackController {
     @GetMapping("/packs/create")
     public String ShowPackRegisterForm( Model model){
         model.addAttribute("pack", new Pack());
-        return "packs/create";
+        return  "redirect: /packs/create";
     }
 
     @PostMapping("/packs/save")
     public String savePack(@ModelAttribute Pack pack){
+        System.out.println(pack);
         User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 //        NOTE: Need to find one way to connect and verify user has autho to do this.
 //        pack.setCook_id(cook_id);
