@@ -17,10 +17,10 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 public class SecurityConfiguration {
 
-    private final UserDetailsLoader userLoader;
+    private final UserDetailsLoader usersLoader;
 
     public SecurityConfiguration(UserDetailsLoader usersLoader){
-        this.userLoader = usersLoader;
+        this.usersLoader = usersLoader;
     }
 
     @Bean
