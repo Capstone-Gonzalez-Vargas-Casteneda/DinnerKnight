@@ -20,8 +20,8 @@ public class Event {
     private String description;
 
     @ManyToOne
-    @JoinColumn(name = "group_id")
-    private Group group;
+    @JoinColumn(name = "pack_id")
+    private Pack pack;
 
     @ManyToOne
     @JoinColumn(name = "food_id")
@@ -33,16 +33,16 @@ public class Event {
         this.name = copy.name;
         this.address = copy.address;
         this.description = copy.description;
-        this.group = copy.group;
+        this.pack = copy.pack;
         this.food = copy.food;
     }
 
-    public Event(long id, String name, String address, String description, Group group, Food food) {
+    public Event(long id, String name, String address, String description, Pack pack, Food food) {
         this.id = id;
         this.name = name;
         this.address = address;
         this.description = description;
-        this.group = group;
+        this.pack = pack;
         this.food = food;
     }
 
@@ -78,12 +78,12 @@ public class Event {
         this.description = description;
     }
 
-    public Group getGroup() {
-        return group;
+    public Pack getGroup() {
+        return pack;
     }
 
-    public void setGroup(Group group) {
-        this.group = group;
+    public void setGroup(Pack pack) {
+        this.pack = pack;
     }
 
     public Food getFood() {

@@ -5,8 +5,8 @@ import jakarta.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "groups")
-public class Group {
+@Table(name = "pack")
+public class Pack {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,12 +24,12 @@ public class Group {
     @Column(nullable = false)
     private String description;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "group")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "pack")
     private List<Event> events;
 
-    public Group(){}
+    public Pack(){}
 
-    public Group(Group copy){
+    public Pack(Pack copy){
         this.id = copy.id;
         this.name = copy.name;
         this.address = copy.address;
@@ -37,7 +37,7 @@ public class Group {
         this.description = copy.description;
     }
 
-    public Group(long id, String name, String address, long cook_id, String description) {
+    public Pack(long id, String name, String address, long cook_id, String description) {
         this.id = id;
         this.name = name;
         this.address = address;
@@ -45,7 +45,7 @@ public class Group {
         this.description = description;
     }
 
-    public Group(String name, String address, long cook_id, String description) {
+    public Pack(String name, String address, long cook_id, String description) {
         this.name = name;
         this.address = address;
         this.cook_id = cook_id;
