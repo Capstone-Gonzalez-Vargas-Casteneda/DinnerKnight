@@ -1,12 +1,16 @@
 package com.example.dinnerknight.controllers;
 
+import com.example.dinnerknight.models.Pack;
 import com.example.dinnerknight.models.User;
+import com.example.dinnerknight.repositories.PackRepository;
 import com.example.dinnerknight.repositories.UserRepository;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
@@ -14,10 +18,13 @@ public class UserController {
 
     private final UserRepository userDao;
 
+    private final PackRepository packDao;
+
     private final PasswordEncoder passwordEncoder;
 
-    public UserController(UserRepository userDao, PasswordEncoder passwordEncoder) {
+    public UserController(UserRepository userDao,PackRepository packDao, PasswordEncoder passwordEncoder) {
         this.userDao = userDao;
+        this.packDao = packDao;
         this.passwordEncoder = passwordEncoder;
     }
 
@@ -35,12 +42,27 @@ public class UserController {
     }
     @GetMapping("/profile")
     public String showProfile(){
-        return "user/profile";
+        return "users/profile";
     }
 
-    @GetMapping("/edit")
-    public String editProfile(){
-        return "user/edit";
-    }
+//    @GetMapping("/profile/{id}/edit")
+//    public String editUserProfile(Model model @PathVariable long id) {
+//        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+//        Pack pack = packDao.findPackById(id);
+//
+//        return "users/edit";
+//    }
+//
+//    @GetMapping("/ads/{id}/edit")
+//    public String editAdForm(Model model, @PathVariable long id) {
+//        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+//        Ad ad = adDao.findAdById(id);
+//        if (user.getId() == ad.getUser().getId()) {
+//            model.addAttribute("ad", ad);
+//            return "ads/create";
+//        } else {
+//            return "redirect:/ads";
+//        }
+//    }
 }
 
