@@ -18,10 +18,10 @@ public class User {
     private String username;
 
     @Column(nullable = false)
-    private String first_name;
+    private String firstName;
 
     @Column(nullable = false)
-    private String last_name;
+    private String lastName;
 
     @Column(nullable = false)
     private String password;
@@ -53,28 +53,28 @@ public class User {
         id = copy.id;
         email = copy.email;
         username = copy.username;
-        first_name = copy.first_name;
-        last_name = copy.last_name;
+        firstName = copy.firstName;
+        lastName = copy.lastName;
         password = copy.password;
         isCook = copy.isCook;
     }
 
-    public User(long id, String email, String username, String first_name, String last_name, String password, boolean isCook, List<Food> foods) {
+    public User(long id, String email, String username, String firstName, String lastName, String password, boolean isCook, List<Food> foods) {
         this.id = id;
         this.email = email;
         this.username = username;
-        this.first_name = first_name;
-        this.last_name = last_name;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.password = password;
         this.isCook = isCook;
-//        this.foods = foods;
+        this.foods = foods;
     }
 
     public User(long id, String username, boolean isCook, List<Food> foods) {
         this.id = id;
         this.username = username;
         this.isCook = isCook;
-//        this.foods = foods;
+        this.foods = foods;
     }
 
     public long getId() {
@@ -101,20 +101,20 @@ public class User {
         this.username = username;
     }
 
-    public String getFirst_name() {
-        return first_name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
+    public void setFirstName(String first_name) {
+        this.firstName = firstName;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setLastName(String last_name) {
+        this.lastName = lastName;
     }
 
     public String getPassword() {
@@ -133,11 +133,11 @@ public class User {
         isCook = cook;
     }
 
-//    public List<Food> getFoods() {
-//        return foods;
-//    }
+    public List<Food> getFoods() {
+        return foods;
+    }
 
-//    public void setFoods(List<Food> foods) {
-//        this.foods = foods;
-//    }
+    public void setFoods(List<Food> foods) {
+        this.foods = foods;
+    }
 }

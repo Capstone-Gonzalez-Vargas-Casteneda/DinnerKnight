@@ -19,7 +19,7 @@ public class Pack {
     private String address;
 
     @Column(nullable = false)
-    private long cook_id;
+    private long cookId;
 
     @Column(nullable = false)
     private String description;
@@ -36,22 +36,22 @@ public class Pack {
         this.id = copy.id;
         this.name = copy.name;
         this.address = copy.address;
-        this.cook_id = copy.cook_id;
+        this.cookId = copy.cookId;
         this.description = copy.description;
     }
 
-    public Pack(long id, String name, String address, long cook_id, String description) {
+    public Pack(long id, String name, String address, long cookId, String description) {
         this.id = id;
         this.name = name;
         this.address = address;
-        this.cook_id = cook_id;
+        this.cookId = cookId;
         this.description = description;
     }
 
-    public Pack(String name, String address, long cook_id, String description) {
+    public Pack(String name, String address, long cookId, String description) {
         this.name = name;
         this.address = address;
-        this.cook_id = cook_id;
+        this.cookId = cookId;
         this.description = description;
     }
 
@@ -79,12 +79,12 @@ public class Pack {
         this.address = address;
     }
 
-    public long getCook_id() {
-        return cook_id;
+    public long getCookId() {
+        return cookId;
     }
 
-    public void setCook_id(long cook_id) {
-        this.cook_id = cook_id;
+    public void setCookId(long cookId) {
+        this.cookId = cookId;
     }
 
     public String getDescription() {
