@@ -27,6 +27,9 @@ public class Pack {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "pack")
     private List<Event> events;
 
+    @ManyToMany(mappedBy = "packs")
+    private List<User> users;
+
     public Pack(){}
 
     public Pack(Pack copy){

@@ -37,6 +37,14 @@ public class User {
     )
     private List<Food> foods;
 
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "pack_user",
+            joinColumns = {@JoinColumn(name = "user_id")},
+            inverseJoinColumns = {@JoinColumn(name = "pack_id")}
+    )
+    private List<Pack> packs;
+
 
     public User() {
     }
