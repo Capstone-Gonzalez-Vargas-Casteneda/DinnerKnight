@@ -78,11 +78,11 @@ public class Event {
         this.description = description;
     }
 
-    public Pack getGroup() {
+    public Pack getPack() {
         return pack;
     }
 
-    public void setGroup(Pack pack) {
+    public void setPack(Pack pack) {
         this.pack = pack;
     }
 

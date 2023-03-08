@@ -1,8 +1,10 @@
 package com.example.dinnerknight.controllers;
 
 import com.example.dinnerknight.models.Pack;
+import com.example.dinnerknight.models.User;
 import com.example.dinnerknight.repositories.PackRepository;
 import com.example.dinnerknight.repositories.UserRepository;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,21 +23,22 @@ public class PackController {
         this.packDao = packDao;
     }
 
-    @GetMapping("/pack/register")
+    @GetMapping("/packs/create")
     public String ShowPackRegisterForm( Model model){
         model.addAttribute("pack", new Pack());
-        return "";
+        return "packs/create";
     }
 
-    @PostMapping("/pack/register")
+    @PostMapping("/packs/save")
     public String savePack(@ModelAttribute Pack pack){
-        long cook_id = userDao.getById() // need to find a way to grab the id from the sessions user.
-        pack.setCook_id(cook_id);
-        packDao.save(pack);
-        return "redirect: /pack/profile";
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+//        NOTE: Need to find one way to connect and verify user has autho to do this.
+//        pack.setCook_id(cook_id);
+//        packDao.save(pack);
+        return "redirect: /packs/profile";
     }
 
-    @GetMapping("/pack/profile")
+    @GetMapping("/packs/profile")
     public String showPackProfile(){
         return "pack/profile";
     }
