@@ -105,7 +105,7 @@ public class User {
         return firstName;
     }
 
-    public void setFirstName(String first_name) {
+    public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
@@ -113,7 +113,7 @@ public class User {
         return lastName;
     }
 
-    public void setLastName(String last_name) {
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
