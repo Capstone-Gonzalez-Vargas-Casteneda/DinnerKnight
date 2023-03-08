@@ -4,11 +4,11 @@ import com.example.dinnerknight.repositories.UserRepository;
 import org.springframework.stereotype.Controller;
 
 @Controller
-public class eventController {
+public class EventController {
 
     private final UserRepository userDao;
 
-    public eventController(UserRepository userDao){
+    public EventController(UserRepository userDao){
         this.userDao = userDao;
     }
 }
