@@ -49,7 +49,7 @@ public class SecurityConfiguration {
                 .permitAll()
                 .and()
                 .authorizeHttpRequests()
-                .requestMatchers( "/posts/**", "/profile")
+                .requestMatchers( "/posts/**", "/profile","/foods","/foods/**")
                 .authenticated();
         return http.build();
     }
