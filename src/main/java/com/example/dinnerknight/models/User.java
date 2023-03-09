@@ -36,11 +36,11 @@ public class User {
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
-            name = "pack_user",
+            name = "event_user",
             joinColumns = {@JoinColumn(name = "user_id")},
-            inverseJoinColumns = {@JoinColumn(name = "pack_id")}
+            inverseJoinColumns = {@JoinColumn(name = "event_id")}
     )
-    private List<Pack> packs;
+    private List<Event> events;
 
 
     public User() {
@@ -53,9 +53,10 @@ public class User {
         firstName = copy.firstName;
         lastName = copy.lastName;
         password = copy.password;
+        events = copy.events;
     }
 
-    public User(long id, String email, String username, String firstName, String lastName, String password, List<Food> foods) {
+    public User(long id, String email, String username, String firstName, String lastName, String password, List<Food> foods,List<Event> events) {
         this.id = id;
         this.email = email;
         this.username = username;
@@ -63,6 +64,7 @@ public class User {
         this.lastName = lastName;
         this.password = password;
         this.foods = foods;
+        this.events = events;
     }
 
     public User(long id, String username, List<Food> foods) {

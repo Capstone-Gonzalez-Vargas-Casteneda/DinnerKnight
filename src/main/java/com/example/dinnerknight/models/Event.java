@@ -20,8 +20,8 @@ public class Event {
     private String description;
 
     @ManyToOne
-    @JoinColumn(name = "pack_id")
-    private Pack pack;
+    @JoinColumn(name = "user_id")
+    private User owner;
 
     @ManyToOne
     @JoinColumn(name = "food_id")
@@ -33,17 +33,25 @@ public class Event {
         this.name = copy.name;
         this.address = copy.address;
         this.description = copy.description;
-        this.pack = copy.pack;
+        this.owner = copy.owner;
         this.food = copy.food;
     }
 
-    public Event(long id, String name, String address, String description, Pack pack, Food food) {
+    public Event(long id, String name, String address, String description, User owner, Food food) {
         this.id = id;
         this.name = name;
         this.address = address;
         this.description = description;
-        this.pack = pack;
+        this.owner = owner;
         this.food = food;
+    }
+
+    public User getOwner() {
+        return owner;
+    }
+
+    public void setOwner(User owner) {
+        this.owner = owner;
     }
 
     public String getName() {
@@ -78,13 +86,6 @@ public class Event {
         this.description = description;
     }
 
-    public Pack getPack() {
-        return pack;
-    }
-
-    public void setPack(Pack pack) {
-        this.pack = pack;
-    }
 
     public Food getFood() {
         return food;

@@ -14,15 +14,15 @@
     <p>Email: <span th:text="${#authentication.principal.email}"></span></p>
 
     <h2>Favorite Foods</h2>
-    <p>Favorite Food 1: <span th:text="${#authentication.principal.foods}"></span></p>
 <!--    <div class="card-deck">-->
 <!--        <div class="card" th:each="food : ${#authentication.principal.food}">-->
-<!--&lt;!&ndash;            <img class="card-img-top" th:src="${food.image}" alt="Food Image">&ndash;&gt;-->
-<!--            <div class="card-body">-->
-<!--                <h5 class="card-title" th:text="${food.name}"></h5>-->
-<!--                <p class="card-text" th:text="${food.instructions}"></p>-->
-<!--                <p class="card-text" th:text="${food.ingredients}"></p>-->
-<!--            </div>-->
+<!--&lt;!&ndash;            <img class="card-img-top" th:src="${food.getImageUrl()}" alt="Food Image">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="card-body"> &ndash;&gt;-->
+<!--&lt;!&ndash;                <h5 class="card-title" th:text="${user.name()}"></h5>&ndash;&gt;-->
+<!--&lt;!&ndash;                <p class="card-text" th:text="${user.instructions()}"></p>&ndash;&gt;-->
+<!--&lt;!&ndash;                <p class="card-text" th:text="${user.ingredients()}"></p>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+
 <!--        </div>-->
 <!--    </div>-->
 </div>
