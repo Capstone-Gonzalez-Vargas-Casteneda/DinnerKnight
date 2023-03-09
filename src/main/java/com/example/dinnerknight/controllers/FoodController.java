@@ -1,6 +1,7 @@
 package com.example.dinnerknight.controllers;
 
 import com.example.dinnerknight.models.Event;
+
 import com.example.dinnerknight.models.Food;
 import com.example.dinnerknight.repositories.EventRepository;
 import com.example.dinnerknight.repositories.FoodRepository;
@@ -29,7 +30,7 @@ public class FoodController {
     }
 
     @GetMapping("/foods/create")
-    public String foodForm(Model model){
+    public String addFoodForm(Model model){
         model.addAttribute("food", new Food());
         return "food/create";
     }
