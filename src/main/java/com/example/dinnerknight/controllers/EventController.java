@@ -33,7 +33,6 @@ public class EventController {
     public String eventForm(Model model){
         model.addAttribute("event", new Event());
         return "events/create";
-
     }
 
 //    @PostMapping("/events/save")
