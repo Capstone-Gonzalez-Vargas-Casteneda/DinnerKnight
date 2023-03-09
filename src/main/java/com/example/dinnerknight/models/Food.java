@@ -25,8 +25,12 @@ public class Food {
     private List<Event> events;
 
 
-    public Food(){
+    public Food(){}
 
+    public Food(Food copy) {
+        name = copy.name;
+        ingredients = copy.ingredients;
+        instructions = copy.instructions;
     }
 
     public Food(Long id, String name, String ingredients, String instructions) {
