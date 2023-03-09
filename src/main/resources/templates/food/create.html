@@ -4,6 +4,20 @@
 </head>
 <body>
 <nav th:replace="~{partials :: navbar}"></nav>
+<main class="container">
+    <h1>Plan an event</h1>
+    <form th:action="@{foods/create}" th:method="post" th:object="${food}">
+        <div class="mb-3">
+            <label for="ingredients" class="form-label">Ingredients: </label>
+            <input type="text" name="ingredients" id="ingredients" class="form-control" th:field="*{ingredients}">
+            <input type="text" name="food" id="instructions" class="form-control" th:field="*{food}">
+            <input type="hidden" th:field="*{id}">
+        </div>
+        <button class="btn w-100"> Create New Event!</button>
+    </form>
 
+</main>
+<footer th:replace="partials :: footer"></footer>
+<div th:replace="partials :: foot-script"></div>
 </body>
 </html>
