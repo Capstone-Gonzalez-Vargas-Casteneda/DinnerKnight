@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <head th:replace="partials :: head">
-        <title> User Profile</title>
-    </head>
+
+<head th:replace="partials :: head">
 </head>
+
 <body>
 <div class="container">
     <nav th:replace="partials :: navbar"></nav>
@@ -26,6 +25,7 @@
     </div>
 </div>
 <footer th:replace="partials :: footer"></footer>
+<div th:replace="partials :: foot-script"> </div>
 </body>
 </html>
 
