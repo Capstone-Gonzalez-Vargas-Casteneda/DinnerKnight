@@ -14,8 +14,10 @@
             <label for="ingredients" class="form-label">Ingredients needed: </label>
             <input type="text" name="ingredients" id="ingredients" class="form-control" th:field="*{ingredients}">
             <label for="instruction" class="form-label">Instructions to follow: </label>
-            <input type="text" name="instruction" id="instruction" class="form-control" th:field="*{instructions}">
+            <input type="textarea" name="instruction" id="instruction" class="form-control" th:field="*{instructions}">
+            <input type="hidden" th:field="*{id}">
         </div>
+        <button class="btn w-100"> Add your recipe!</button>
     </form>
 
 <footer th:replace="partials :: footer"></footer>
