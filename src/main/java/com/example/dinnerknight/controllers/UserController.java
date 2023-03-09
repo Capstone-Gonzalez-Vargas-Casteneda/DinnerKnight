@@ -3,6 +3,7 @@ package com.example.dinnerknight.controllers;
 
 import com.example.dinnerknight.models.User;
 import com.example.dinnerknight.repositories.UserRepository;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -35,7 +36,8 @@ public class UserController {
     }
 
     @GetMapping("/profile")
-    public String showProfile() {
+    public String showProfile(Model model) {
+        model.addAttribute("user", userDao.findUserById(((User) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getId()));
         return "users/userProfileView";
     }
 
