@@ -14,16 +14,16 @@
     <p>Email: <span th:text="${#authentication.principal.email}"></span></p>
 
     <h2>Favorite Foods</h2>
-    <div class="card-deck">
-        <div class="card" th:each="food : ${#authentication.principal.food}">
-<!--            <img class="card-img-top" th:src="${food.getImageUrl()}" alt="Food Image">-->
-<!--            <div class="card-body"> -->
-<!--                <h5 class="card-title" th:text="${user.name()}"></h5>-->
-<!--                <p class="card-text" th:text="${user.instructions()}"></p>-->
-<!--                <p class="card-text" th:text="${user.ingredients()}"></p>-->
-<!--            </div>-->
-        </div>
-    </div>
+<!--    <div class="card-deck">-->
+<!--        <div class="card" th:each="food : ${#authentication.principal.food}">-->
+<!--&lt;!&ndash;            <img class="card-img-top" th:src="${food.getImageUrl()}" alt="Food Image">&ndash;&gt;-->
+<!--&lt;!&ndash;            <div class="card-body"> &ndash;&gt;-->
+<!--&lt;!&ndash;                <h5 class="card-title" th:text="${user.name()}"></h5>&ndash;&gt;-->
+<!--&lt;!&ndash;                <p class="card-text" th:text="${user.instructions()}"></p>&ndash;&gt;-->
+<!--&lt;!&ndash;                <p class="card-text" th:text="${user.ingredients()}"></p>&ndash;&gt;-->
+<!--&lt;!&ndash;            </div>&ndash;&gt;-->
+<!--        </div>-->
+<!--    </div>-->
 </div>
 
 <footer th:replace="partials :: footer"></footer>
