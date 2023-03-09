@@ -19,6 +19,9 @@ public class Event {
     @Column(nullable = false)
     private String description;
 
+    @Column(nullable = false)
+    private String eventDate;
+
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User owner;
@@ -33,17 +36,27 @@ public class Event {
         this.name = copy.name;
         this.address = copy.address;
         this.description = copy.description;
+        this.eventDate = copy.eventDate;
         this.owner = copy.owner;
         this.food = copy.food;
     }
 
-    public Event(long id, String name, String address, String description, User owner, Food food) {
+    public Event(long id, String name, String address,String eventDate, String description, User owner, Food food) {
         this.id = id;
         this.name = name;
         this.address = address;
+        this.eventDate = eventDate;
         this.description = description;
         this.owner = owner;
         this.food = food;
+    }
+
+    public String getEventDate() {
+        return eventDate;
+    }
+
+    public void setEventDate(String eventDate) {
+        this.eventDate = eventDate;
     }
 
     public User getOwner() {
