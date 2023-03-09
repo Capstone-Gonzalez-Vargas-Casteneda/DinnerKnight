@@ -12,11 +12,11 @@ public class AuthenticationController {
         return "users/login";
     }
 
-    @PostMapping("/login")
-    public String login(@RequestParam String username, @RequestParam String password){
-        if (username.equals("admin") && password.equals("password")) {
-            return "redirect:/landing";
-        }
-        return "redirect:/login?error";
-    }
+//    @PostMapping("/login")
+//    public String login(@RequestParam String username, @RequestParam String password){
+//        if (username.equals("admin") && password.equals("password")) {
+//            return "redirect:/profile";
+//        }
+//        return "redirect:/login?error";
+//    }
 }

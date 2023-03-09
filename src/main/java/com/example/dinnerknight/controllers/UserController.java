@@ -34,22 +34,9 @@ public class UserController {
         return "redirect:/login";
     }
 
-    @GetMapping("/login")
-    public String loginInForm() {
-        return "login";
-    }
-
-    @PostMapping("/login")
-    public String login(@RequestParam String username, @RequestParam String password){
-        if (username.equals("admin") && password.equals("password")) {
-            return "redirect:/landing";
-        }
-        return "redirect:/login?error";
-    }
-
     @GetMapping("/profile")
     public String showProfile() {
-        return "users/profile";
+        return "users/userProfileView";
     }
 
 //    @GetMapping("/profile/{id}/edit")
