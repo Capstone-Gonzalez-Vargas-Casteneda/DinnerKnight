@@ -26,9 +26,6 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-    @Column(nullable = false)
-    private boolean isCook;
-
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name = "food_user",
@@ -56,24 +53,21 @@ public class User {
         firstName = copy.firstName;
         lastName = copy.lastName;
         password = copy.password;
-        isCook = copy.isCook;
     }
 
-    public User(long id, String email, String username, String firstName, String lastName, String password, boolean isCook, List<Food> foods) {
+    public User(long id, String email, String username, String firstName, String lastName, String password, List<Food> foods) {
         this.id = id;
         this.email = email;
         this.username = username;
         this.firstName = firstName;
         this.lastName = lastName;
         this.password = password;
-        this.isCook = isCook;
         this.foods = foods;
     }
 
-    public User(long id, String username, boolean isCook, List<Food> foods) {
+    public User(long id, String username, List<Food> foods) {
         this.id = id;
         this.username = username;
-        this.isCook = isCook;
         this.foods = foods;
     }
 
@@ -123,14 +117,6 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public boolean isCook() {
-        return isCook;
-    }
-
-    public void setCook(boolean cook) {
-        isCook = cook;
     }
 
     public List<Food> getFoods() {

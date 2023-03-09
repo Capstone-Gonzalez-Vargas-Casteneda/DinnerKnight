@@ -1,6 +1,7 @@
 package com.example.dinnerknight.controllers;
 
 import com.example.dinnerknight.models.Event;
+import com.example.dinnerknight.models.Pack;
 import com.example.dinnerknight.models.User;
 import com.example.dinnerknight.repositories.EventRepository;
 import com.example.dinnerknight.repositories.FoodRepository;
@@ -30,12 +31,9 @@ public class EventController {
 
     @GetMapping("/events/create")
     public String eventForm(Model model){
-        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        if(user.isCook()){
-            model.addAttribute("event", new Event());
-            return "events/create";
-        }
-        return "groups/profile";
+        model.addAttribute("event", new Event());
+        return "events/create";
+
     }
 
 //    @PostMapping("/events/save")

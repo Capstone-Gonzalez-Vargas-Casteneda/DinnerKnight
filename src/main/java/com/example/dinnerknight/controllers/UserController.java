@@ -1,10 +1,8 @@
 package com.example.dinnerknight.controllers;
 
-import com.example.dinnerknight.models.Pack;
+
 import com.example.dinnerknight.models.User;
-import com.example.dinnerknight.repositories.PackRepository;
 import com.example.dinnerknight.repositories.UserRepository;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -40,11 +38,13 @@ public class UserController {
     public String loginInForm() {
         return "login";
     }
+
     @PostMapping("/login")
-    public String loginProcess(@RequestParam String username, @RequestParam String password){
+    public String login(@RequestParam String username, @RequestParam String password){
         if (username.equals("admin") && password.equals("password")) {
             return "redirect:/landing";
         }
+        return "redirect:/login?error";
     }
 
     @GetMapping("/profile")
@@ -58,7 +58,6 @@ public class UserController {
 //        Pack pack = packDao.findPackById(id);
 //        return "users/edit";
 //    }
-//
 //    @GetMapping("/ads/{id}/edit")
 //    public String editAdForm(Model model, @PathVariable long id) {
 //        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
