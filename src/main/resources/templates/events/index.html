@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="~{partials :: head}">
+</head>
+<body>
+<nav th:replace="~{partials :: navbar}"></nav>
+<main>
+    <div th:each="event : ${events}">
+        <a th:href="@{/events/{id} (id = ${event.id})}"><h1 th:text="${event.name}"></h1></a>
+        <p th:text="${event.food.name}"></p>
+        <button type= >To Join event! </button>
+    </div>
+
+
+</main>
+<footer th:replace="partials :: footer"></footer>
+<div th:replace="partials :: foot-script"></div>
+</body>
+</html>

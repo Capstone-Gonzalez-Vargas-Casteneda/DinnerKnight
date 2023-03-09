@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="~{partials :: head}">
+</head>
+<body>
+<nav th:replace="~{partials :: navbar}"></nav>
+
+<main class="container">
+    <h1>Plan an event</h1>
+    <form th:action="@{/events/save}" th:method="post" th:object="${event}">
+        <div class="mb-3">
+        <label for="eventName" class="form-label">Event Name: </label>
+        <input type="text" name="eventName" id="eventName" class="form-control" th:field="*{name}">
+        <label for="address" class="form-label">Event Location: </label>
+        <input type="text" name="address" id="address" class="form-control" th:field="*{address}">
+        <label for="food" class="form-label">What's being served: </label>
+        <input type="text" name="food" id="food" class="form-control" th:field="*{food}">
+        <label for="description" class="form-label"> Event Description: </label>
+        <textarea name="description" id="description" class="form-control" cols="15" rows="10" th:field="*{description}"></textarea>
+        <input type="hidden" th:field="*{id}">
+        </div>
+        <button class="btn w-100"> Create New Event!</button>
+    </form>
+
+</main>
+<footer th:replace="partials :: footer"></footer>
+<div th:replace="partials :: foot-script"></div>
+</body>
+</html>
