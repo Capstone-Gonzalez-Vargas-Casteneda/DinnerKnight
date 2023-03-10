@@ -2,13 +2,7 @@
 
 
     function requestFood(){
-        $.ajax({
-            method: 'GET',
-            url: 'www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata'
-        }).done(function (data) {
-            console.log(data);
-
-        });
-
+fetch("https://themealdb.com/api/json/v1/1/search.php?s=pasta").then(resp => resp.json()).then(data => console.log(data))
 }
+requestFood();
 
