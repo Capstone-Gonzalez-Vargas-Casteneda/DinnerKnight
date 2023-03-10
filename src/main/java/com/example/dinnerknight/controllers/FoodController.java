@@ -27,7 +27,8 @@ public class FoodController {
     }
 
     @GetMapping("/foods")
-    public String foodForm() {
+    public String foodForm(Model model) {
+        model.addAttribute("foods", foodDao.findAll());
         return "foods/index";
     }
 
@@ -38,10 +39,8 @@ public class FoodController {
         return "foods/create";
     }
 
-    @GetMapping("/foods/save")
+    @PostMapping("/foods/save")
     public String saveFood(@ModelAttribute Food food) {
-//        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-//        Event eventFood = eventDao.findEventById(1);
         foodDao.save(food);
         return "redirect:/foods";
     }
