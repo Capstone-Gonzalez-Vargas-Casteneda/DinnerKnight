@@ -47,14 +47,16 @@ public class FoodController {
         }
         return "redirect:/foods/index";
     }
-//    @GetMapping("/food/{id}/delete")
-//    public String deleteFood(@PathVariable long id) {
-//        Food noEat = foodDao.findFoodById(id);
-//        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-//        if(user)
-//     }
-
-
+    @GetMapping("/food/{id}/delete")
+    public String deleteFood(@PathVariable long id) {
+        Food noEat = foodDao.findFoodById(id);
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        if(user.getId() == noEat.getId()){
+            foodDao.delete(noEat);
+            return "redirect:/foods";
+        }
+        return "redirect:/foods";
+     }
 }
 
 
