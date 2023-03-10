@@ -1,28 +1,31 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>About Us</title>
-  <link rel="stylesheet" href="/css/style.css">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="~{partials :: head}">
 </head>
 <body>
-<h1>About Us</h1>
-<section class="team">
-  <div class="member">
+<nav th:replace="~{partials :: navbar}"></nav>
+
+<main class="container theMeat">
+<h1 class="pageHeaderText">About Us</h1>
+<section class="team row mx-auto">
+  <div class="member col-3">
     <img src="/img/member1.jpg" alt="Member 1">
     <h2>Matthew Gonzalez</h2>
     <p>blah blah blah</p>
   </div>
-  <div class="member">
+  <div class="member col-3">
     <img src="/img/member2.jpg" alt="Member 2">
     <h2>Jonathan Vargas</h2>
     <p>blah blah blah</p>
   </div>
-  <div class="member">
+  <div class="member col-3">
     <img src="/img/member3.jpg" alt="Member 3">
     <h2>Javier Castaneda</h2>
     <p>blah blah blah</p>
   </div>
 </section>
+</main>
+<footer th:replace="partials :: footer"></footer>
+<div th:replace="partials :: foot-script"></div>
 </body>
 </html>
