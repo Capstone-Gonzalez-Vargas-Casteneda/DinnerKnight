@@ -2,6 +2,8 @@ package com.example.dinnerknight.models;
 
 import jakarta.persistence.*;
 
+import java.util.Date;
+
 @Entity
 @Table(name = "events")
 public class Event {

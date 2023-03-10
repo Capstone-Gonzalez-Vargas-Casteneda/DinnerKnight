@@ -16,4 +16,9 @@ public class AuthenticationController {
     public String aboutUs(){
         return "/aboutus";
     }
+
+    @GetMapping("/api/tester")
+    public String apiTest(){
+        return "/jsTester";
+    }
 }
