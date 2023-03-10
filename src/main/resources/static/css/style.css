@@ -1,6 +1,54 @@
-.main-container{
+
+.nb{
+    background-color: rebeccapurple;
+    color: antiquewhite;
+}
+
+.pageHeaderText{
+    text-align: center;
+    margin-top: 50px;
+    font-family: fantasy;
+    font-size: 36px;
+    font-weight: bolder;
+}
+
+.landingImages{
+    min-height: 150px;
+    min-width: 150px;
+}
+
+.landingCircles{
+    width: 175px;
+    border-radius: 50%;
+    background-color:#e25363 ;
+}
+
+.landingBoxes{
+    background-color: rebeccapurple;
+    color: antiquewhite;
+
+}
+
+.submitButton{
+    width: 100%;
+    margin-top: 35px;
+    background-color: dimgrey;
+    text-align: center;
+}
+
+.theMeat{
     display: flex;
     min-height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
 }
+
+.eventCard{
+    justify-content: center;
+    margin: auto;
+    min-height: 250px;
+    border-radius: 5%;
+    background-color: rebeccapurple;
+    color: antiquewhite;
+}
+

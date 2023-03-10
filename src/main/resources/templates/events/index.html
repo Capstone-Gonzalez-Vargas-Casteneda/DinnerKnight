@@ -4,13 +4,14 @@
 </head>
 <body>
 <nav th:replace="~{partials :: navbar}"></nav>
-<main>
-    <div th:each="event : ${events}">
-        <a th:href="@{/events/{id} (id = ${event.id})}"><h1 th:text="${event.name}"></h1></a>
-        <p th:text="${event.food.name}"></p>
-        <button type= >To Join event! </button>
+<main class="theMeat">
+    <h1 class="pageHeaderText">|The Events|</h1>
+    <div class="container">
+        <div class="col-6 text-center eventCard" th:each="event : ${events}">
+            <a th:href="@{/events/{id} (id = ${event.id})}"><h1 th:text="${event.name}"></h1></a>
+            <p th:text="${event.food.name}"></p>
+        </div>
     </div>
-
 
 </main>
 <footer th:replace="partials :: footer"></footer>

@@ -5,8 +5,8 @@
 <body>
 <nav th:replace="~{partials :: navbar}"></nav>
 
-<main class="container">
-    <h1>Plan an event</h1>
+<main class="container theMeat">
+    <h1 class="pageHeaderText">Plan an event</h1>
     <form th:action="@{/events/save}" th:method="post" th:object="${event}">
         <div class="mb-3">
         <label for="eventName" class="form-label">Event Name: </label>
@@ -21,7 +21,7 @@
         <textarea name="description" id="description" class="form-control" cols="15" rows="10" th:field="*{description}"></textarea>
         <input type="hidden" th:field="*{id}">
         </div>
-        <button class="btn w-100"> Create New Event!</button>
+        <button class="submitButton"> Create New Event!</button>
     </form>
 
 </main>
