@@ -1,7 +1,9 @@
 package com.example.dinnerknight.controllers;
 
 
+import com.example.dinnerknight.models.Event;
 import com.example.dinnerknight.models.User;
+import com.example.dinnerknight.repositories.EventRepository;
 import com.example.dinnerknight.repositories.UserRepository;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -14,10 +16,13 @@ public class UserController {
 
     private final UserRepository userDao;
 
+    private final EventRepository eventDao;
+
     private final PasswordEncoder passwordEncoder;
 
-    public UserController(UserRepository userDao, PasswordEncoder passwordEncoder) {
+    public UserController(UserRepository userDao,EventRepository eventDao, PasswordEncoder passwordEncoder) {
         this.userDao = userDao;
+        this.eventDao = eventDao;
         this.passwordEncoder = passwordEncoder;
     }
 
@@ -40,6 +45,13 @@ public class UserController {
         model.addAttribute("user", userDao.findUserById(((User) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getId()));
         return "users/userProfileView";
     }
+
+//    @GetMapping("events/{id}join")
+//    public String joinEvent(@PathVariable long id){
+//    User joinUser = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+//    Event event = eventDao.findEventById(id);
+//
+//    }
 
 //    @GetMapping("/profile/{id}/edit")
 //    public String editUserProfile(Model model @PathVariable long id) {
