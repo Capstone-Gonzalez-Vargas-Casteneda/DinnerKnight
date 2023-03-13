@@ -40,35 +40,23 @@ public class UserController {
         return "redirect:/login";
     }
 
+    @GetMapping("/profile/{id}/edit")
+    public String updateUser (@PathVariable long id,Model model){
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        User editedUser = userDao.getReferenceById(id);
+        if(user.getId() == editedUser.getId()){
+            model.addAttribute("user", userDao.getReferenceById(id));
+            return "users/register";
+        }
+        return "redirect:/login";
+    }
+
     @GetMapping("/profile")
     public String showProfile(Model model) {
         model.addAttribute("user", userDao.findUserById(((User) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getId()));
         return "users/userProfileView";
     }
 
-//    @GetMapping("events/{id}join")
-//    public String joinEvent(@PathVariable long id){
-//    User joinUser = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-//    Event event = eventDao.findEventById(id);
-//
-//    }
 
-//    @GetMapping("/profile/{id}/edit")
-//    public String editUserProfile(Model model @PathVariable long id) {
-//        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-//        Pack pack = packDao.findPackById(id);
-//        return "users/edit";
-//    }
-//    @GetMapping("/ads/{id}/edit")
-//    public String editAdForm(Model model, @PathVariable long id) {
-//        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-//        Ad ad = adDao.findAdById(id);
-//        if (user.getId() == ad.getUser().getId()) {
-//            model.addAttribute("ad", ad);
-//            return "ads/create";
-//        } else {
-//            return "redirect:/ads";
-//        }
-//    }
 }
 
