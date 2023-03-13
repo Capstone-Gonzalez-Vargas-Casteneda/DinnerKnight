@@ -54,6 +54,7 @@ public class User {
         lastName = copy.lastName;
         password = copy.password;
         events = copy.events;
+        foods = copy.foods;
     }
 
     public User(long id, String email, String username, String firstName, String lastName, String password, List<Food> foods,List<Event> events) {
@@ -127,5 +128,13 @@ public class User {
 
     public void setFoods(List<Food> foods) {
         this.foods = foods;
+    }
+
+    public void addEvent(Event event){
+        events.add(event);
+    }
+
+    public List<Event> getEvents(){
+        return events;
     }
 }

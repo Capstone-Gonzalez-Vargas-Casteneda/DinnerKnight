@@ -35,6 +35,13 @@
     background-color: dimgrey;
     text-align: center;
 }
+.siteCard{
+    text-align: left;
+    border: 5px solid black;
+    background-color: rebeccapurple;
+    min-width: 65%;
+    color: antiquewhite;
+}
 
 .theMeat{
     display: flex;
@@ -44,11 +51,14 @@
 }
 
 .eventCard{
-    justify-content: center;
-    margin: auto;
-    min-height: 250px;
-    border-radius: 5%;
+    text-align: center;
+    border: 5px solid black;
     background-color: rebeccapurple;
+    min-width: 65%;
+    min-height: 350px;
     color: antiquewhite;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
 }
 

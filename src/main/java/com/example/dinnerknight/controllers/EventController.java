@@ -70,6 +70,17 @@ public class EventController {
         return "redirect:/events";
     }
 
+    @GetMapping("events/{id}/join")
+    public String joinEvent(@PathVariable long id){
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        Event desiredEvent = eventDao.findEventById(id);
+        if(!user.getEvents().contains(desiredEvent)){
+            user.addEvent(desiredEvent);
+        }
+
+        return "redirect:/events/" + id ;
+    }
+
     @GetMapping("/events/{id}/delete")
     public String deleteEvent(@PathVariable long id) {
         Event goodbye = eventDao.findEventById(id);
