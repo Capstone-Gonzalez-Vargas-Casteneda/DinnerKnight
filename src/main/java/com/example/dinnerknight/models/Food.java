@@ -40,6 +40,12 @@ public class Food {
         this.instructions = instructions;
     }
 
+    public Food( String name, String ingredients, String instructions) {
+        this.name = name;
+        this.ingredients = ingredients;
+        this.instructions = instructions;
+    }
+
     public Long getId() {
         return id;
     }
