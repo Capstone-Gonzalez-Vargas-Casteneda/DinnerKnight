@@ -1,4 +1,3 @@
-
 .nb{
     background-color: rebeccapurple;
     color: antiquewhite;
@@ -20,7 +19,7 @@
 .landingCircles{
     width: 175px;
     border-radius: 50%;
-    background-color:#e25363 ;
+    background-color:#e25363;
 }
 
 .landingBoxes{

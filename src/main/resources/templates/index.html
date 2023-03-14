@@ -1,14 +1,55 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head th:replace="~{partials :: head}">
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{/css/style.css}"/>
 </head>
+
 <body class="theMeat">
 <nav th:replace="partials :: navbar"></nav>
 <main class="container ">
     <h1 class="text-center pageHeaderText">Dinner Knight</h1>
     <section class="cards row d-flex justify-content-center my-5">
+
+<!--        <div id="carouselCaptions" class="carousel" data-bs-ride="carousel">-->
+<!--            <div class="carousel-indicators">-->
+<!--                <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0"-->
+<!--                        aria-current="true" aria-label="Slide 1"></button>-->
+<!--                <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1" aria-current="true"-->
+<!--                        aria-label="Slide 2"></button>-->
+<!--                <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="2" aria-current="true"-->
+<!--                        aria-label="Slide 3"></button>-->
+<!--            </div>-->
+<!--            <div class="carousel-inner">-->
+<!--                <div class="carousel-item active">-->
+<!--                    <img src="img/fettuccine-alfredo.jpeg" class="d-block w-100" alt="fettuccine-pasta">-->
+<!--                    <div class="carousel-caption d-none d-md-block">-->
+<!--                        <h3>Come Visit Us!</h3>-->
+<!--                        <p class="img-text">Select from your favorite roasts!</p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="carousel-item active">-->
+<!--                    <img src="img/chicken-congee.jpeg" class="d-block w-100" alt="chicken-congee">-->
+<!--                    <div class="carousel-caption d-none d-md-block">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="carousel-item active">-->
+<!--                    <img src="img/CoffeeTasting.jpeg" class="d-block w-100 slide2" alt="...">-->
+<!--                    <div class="carousel-caption d-none d-md-block">-->
+<!--                        <h3>Coffee for everyone to enjoy!</h3>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">-->
+<!--                <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+<!--                <span class="visually-hidden">Previous</span>-->
+<!--            </button>-->
+<!--            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">-->
+<!--                <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+<!--                <span class="visually-hidden">Next</span>-->
+<!--            </button>-->
+<!--        </div>-->
+
         <div class="card landingImages col-2 mx-3">
-            <img src="https://cdn.filestackcontent.com/8b2aQHFcQzq1X3O27srR" alt="Image description">
         </div>
         <div class="card landingImages col-2 mx-3">
             <img src="https://cdn.filestackcontent.com/YJXAp1TaSOKDSsIJCNID" alt="Image description">
@@ -24,17 +65,21 @@
         </div>
     </section>
 
+    <div class="border landingBoxes row d-flex text-center">
+        <p>Dinner Knight is an application that lets you coordinate dinners or events with friends and family. Dinner Knight is here to bring the quest to your round table.</p>
+    </div>
+
     <div class="border landingBoxes row d-flex flex-nowrap justify-content-center mt-5">
-        <div class="col-3 row  flex-nowrap">
+        <div class="col-6 row  flex-nowrap">
             <div class="col-4">
                 <h4 class="text-center">New Here</h4><br>
                 <p class="text-center">Create an account... </p>
             </div>
-            <div class="col-4 landingCircles align-content-center text-align">
-                <a class="nav-link" href="/register"><p class="text-center m-auto">Click to <br>start... </p></a>
+            <div class="col-4 landingCircles">
+                <a class="nav-link" href="/register"><p class="text-center">Click to <br>start... </p></a>
             </div>
         </div>
-        <div class="col-3 row flex-nowrap">
+        <div class="col-6 row flex-nowrap">
             <div class="col-6">
                 <h4>Welcome back! </h4><br>
                 <p >Thought you <br>looked familiar... </p>
@@ -43,20 +88,8 @@
                 <a class="nav-link" href="/login"><p class="my-3">Click to <br>login... </p></a>
             </div>
         </div>
-        <div class=" col-3 row flex-nowrap">
-            <div class="col-6">
-                <h4>Just want to browse? </h4><br>
-                <p>That's cool too <br>thanks for visiting... </p>
-            </div>
-            <div class="col-6 landingCircles">
-                <p class="justify-content-center align-content-center">Click to <br>login... </p>
-            </div>
-        </div>
-
     </div>
-
 </main>
-<footer th:replace="partials :: footer"></footer>
 <div th:replace="partials :: foot-script"></div>
 </body>
 </html>
