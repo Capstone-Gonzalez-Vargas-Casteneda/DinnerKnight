@@ -18,25 +18,32 @@ public class Food {
     @Column(nullable = false, length = 1000)
     private String instructions;
 
-    @ManyToMany(mappedBy = "foods")
-    private List<User> users;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "food")
     private List<Event> events;
 
-
     public Food(){}
+
+
+
+
 
     public Food(Food copy) {
         name = copy.name;
         ingredients = copy.ingredients;
+        measurements = copy.measurements;
         instructions = copy.instructions;
     }
 
-    public Food(Long id, String name, String ingredients, String instructions) {
+    public Food(Long id, String name, String ingredients, String measurements, String instructions) {
         this.id = id;
         this.name = name;
         this.ingredients = ingredients;
+        this.measurements = measurements;
         this.instructions = instructions;
     }
 
@@ -77,6 +84,14 @@ public class Food {
     public void setInstructions(String instructions) {
         this.instructions = instructions;
     }
+    public String getMeasurements() {
+        return measurements;
+    }
+
+    public void setMeasurements(String measurements) {
+        this.measurements = measurements;
+    }
+
 }
 
 

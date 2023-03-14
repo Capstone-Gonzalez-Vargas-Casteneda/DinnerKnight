@@ -45,11 +45,11 @@ public class SecurityConfiguration {
                 .logoutSuccessUrl("/")
                 .and()
                 .authorizeHttpRequests()
-                .requestMatchers("/", "/register", "/css/**","/js/**","/api/tester")
+                .requestMatchers("/", "/register", "/css/**","/js/**","/api/tester","/about")
                 .permitAll()
                 .and()
                 .authorizeHttpRequests()
-                .requestMatchers( "/posts/**", "/profile","/profile/**","/foods","/foods/**","/events","/events/**","/about")
+                .requestMatchers( "/posts/**", "/profile","/profile/**","/foods","/foods/**","/events","/events/**")
                 .authenticated();
         return http.build();
     }

@@ -7,11 +7,16 @@ import com.example.dinnerknight.models.User;
 import com.example.dinnerknight.repositories.EventRepository;
 import com.example.dinnerknight.repositories.FoodRepository;
 import com.example.dinnerknight.repositories.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.*;
+import java.util.Arrays;
 import java.util.List;
 
 @Controller
@@ -66,6 +71,39 @@ public class FoodController {
         }
         return "redirect:/foods";
     }
+
+
+    @GetMapping("/food/{id}")
+    public String getFoodDetails(@PathVariable int id, Model model) {
+        try {
+
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:8080/mydatabase", "root", "codeup");
+
+
+            PreparedStatement stmt = conn.prepareStatement("SELECT name, instructions, ingredients, measurements FROM food WHERE id = ?");
+            stmt.setInt(1, id);
+
+
+            ResultSet rs = stmt.executeQuery();
+
+
+            if (rs.next()) {
+                Food food = new Food();
+                food.setName(rs.getString("name"));
+                food.setInstructions(rs.getString("instructions"));
+                food.setIngredients(rs.getString("ingredients"));
+                food.setMeasurements(rs.getString("measurements"));
+
+                model.addAttribute("food", food);
+            }
+
+            return "foodDetails";
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return "error";
+        }
+    }
+
 }
 
 
