@@ -53,6 +53,15 @@ public class Event {
         this.food = food;
     }
 
+    public Event( String name, String address,String eventDate, String description, User owner, Food food) {
+        this.name = name;
+        this.address = address;
+        this.eventDate = eventDate;
+        this.description = description;
+        this.owner = owner;
+        this.food = food;
+    }
+
     public String getEventDate() {
         return eventDate;
     }
