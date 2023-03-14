@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-<script>
-    function requestFood(){
-        $.ajax({
-            method: 'GET',
-            url: 'http://www.themealdb.com/api/json/v1/1/lookup.php?i=52772\n'
-        }).done(function (data) {
-            console.log(data);
-        });
-    }
-</script>
-
-</html>
+const client = filestack.init("YOUR_API_KEY");
+client.retrieve("FILE_HANDLE").then(function (result) {
+const canvas = document.createElement("canvas");
+const ctx = canvas.getContext("2d");
+const img = new Image();
+img.onload = function() {
+canvas.width = img.width;
+canvas.height = img.height;
+ctx.drawImage(img, 0, 0);
+};
+img.src = result.url;
+document.body.appendChild(canvas);
+});
