@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FileStack</title>
+</head>
+<body>
+
+<h1>Filestack Picker</h1>
+
+<button id="open">Open Picker</button>
+
+
+
+<script src="https://static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', function() {
+    const apikey = "AVqgWT5FfROCNkDGSUe8xz";
+    const client = filestack.init(apikey);
+    const picker = client.picker();
+
+    const openBtn = document.getElementById('open');
+    openBtn.addEventListener('click', () => picker.open());
+});
+</script>
+</body>
+</html>
+
