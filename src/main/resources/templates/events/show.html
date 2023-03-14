@@ -5,6 +5,7 @@
 <body>
 <nav th:replace="~{partials :: navbar}"></nav>
 <main>
+    <div class="container">
     <div class="d-flex row">
         <div class="col-sm-4">
             <img alt="eventPhoto" class="img-thumbnail">
@@ -13,14 +14,13 @@
             <h1 th:text="${event.name}" class="pageHeaderText"></h1>
             <h4>Created By: <span th:text="${event.owner.username}"></span></h4>
             <h4> Event Location: <span th:text="${event.address}"></span></h4>
-            <h4>Food Being Served: <span th:text="${event.food}"></span></h4>
+            <h4>Food Being Served: <a th:href="@{/foods/{id} (id = ${event.id})}"><span th:text="${event.food.name}"></span></a></h4>
             <a class="btn" th:href="@{/events/{id}/join (id = ${event.id})}">Join Event</a>
         </div>
         <a class="btn" th:href="@{/events}">Return to events</a>
     </div>
-
+    </div>
 </main>
-<footer th:replace="partials :: footer"></footer>
 <div th:replace="partials :: foot-script"></div>
 </body>
 </html>

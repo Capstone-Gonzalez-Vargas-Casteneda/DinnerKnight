@@ -43,6 +43,12 @@
     color: antiquewhite;
 }
 
+.member{
+    border: 3px solid black;
+    margin:30px 30px;
+    justify-content: center;
+}
+
 .theMeat{
     display: flex;
     min-height: 100vh;

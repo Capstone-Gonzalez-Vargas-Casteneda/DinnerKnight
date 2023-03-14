@@ -26,12 +26,15 @@ public class User {
     @Column(nullable = false)
     private String password;
 
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(
-            name = "food_user",
-            joinColumns = {@JoinColumn(name = "user_id")},
-            inverseJoinColumns = {@JoinColumn(name = "food_id")}
-    )
+//    @ManyToMany(cascade = CascadeType.ALL)
+//    @JoinTable(
+//            name = "food_user",
+//            joinColumns = {@JoinColumn(name = "user_id")},
+//            inverseJoinColumns = {@JoinColumn(name = "food_id")}
+//    )
+//    private List<Food> foods;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private List<Food> foods;
 
     @ManyToMany(cascade = CascadeType.ALL)

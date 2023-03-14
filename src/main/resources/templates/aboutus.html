@@ -6,26 +6,31 @@
 <nav th:replace="~{partials :: navbar}"></nav>
 
 <main class="container theMeat">
-<h1 class="pageHeaderText">About Us</h1>
+<h1 class="pageHeaderText">The Team: </h1>
 <section class="team row mx-auto">
   <div class="member col-3">
-    <img src="/img/member1.jpg" alt="Member 1">
-    <h2>Matthew Gonzalez</h2>
-    <p>blah blah blah</p>
+    <img src="../static/images/AU_Matthew_Gonzalez.jpg" th:src="@{../static/images/AU_Matthew_Gonzalez.jpg}" alt="Member 1">
+    <h4>Matthew Gonzalez</h4><br>
+    <a th:href="@{https://www.linkedin.com/in/matthewstevengonzalez/}"><i class="fa-brands fa-linkedin"></i></a>
+    <a th:href="@{https://github.com/Matthew-Steven-Gonzalez}"><i class="fa-brands fa-github"></i></a>
+    <a th:href="@{https://alumni.codeup.com/students/1772}">CodeUp</a>
   </div>
   <div class="member col-3">
     <img src="/img/member2.jpg" alt="Member 2">
-    <h2>Jonathan Vargas</h2>
-    <p>blah blah blah</p>
+    <h4>Jonathan Vargas</h4><br>
+    <a th:href="@{https://www.linkedin.com/in/jonathan-vargas-78b17925a/}"><i class="fa-brands fa-linkedin"></i></a>
+    <a th:href="@{https://github.com/Jonathanvra}"><i class="fa-brands fa-github"></i></a>
+    <a th:href="@{https://alumni.codeup.com/students/1771}">CodeUp</a>
   </div>
   <div class="member col-3">
-    <img src="/img/member3.jpg" alt="Member 3">
-    <h2>Javier Castaneda</h2>
-    <p>blah blah blah</p>
+    <img src="/images/AU_Javier_Castaneda.jpg" alt="Member 3">
+    <h4>Javier Castaneda</h4><br>
+    <a th:href="@{https://www.linkedin.com/in/javier-castaneda-45a95a258/}"><i class="fa-brands fa-linkedin"></i></a>
+    <a th:href="@{https://github.com/JavierCastaneda1}"><i class="fa-brands fa-github"></i></a>
+    <a th:href="@{https://alumni.codeup.com/students/1784}">CodeUp</a>
   </div>
 </section>
 </main>
-<footer th:replace="partials :: footer"></footer>
 <div th:replace="partials :: foot-script"></div>
 </body>
 </html>

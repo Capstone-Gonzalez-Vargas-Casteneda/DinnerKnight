@@ -18,12 +18,12 @@ public class Food {
     @Column(nullable = false, length = 1000)
     private String instructions;
 
-    @ManyToMany(mappedBy = "foods")
-    private List<User> users;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "food")
     private List<Event> events;
-
 
     public Food(){}
 
