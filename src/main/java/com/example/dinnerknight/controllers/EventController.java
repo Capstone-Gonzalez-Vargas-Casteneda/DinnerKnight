@@ -45,6 +45,7 @@ public class EventController {
     @GetMapping("/events/create")
     public String eventForm(Model model){
         model.addAttribute("event", new Event());
+//        model.addAttribute("foodChoice", userDao.findUserById());
         return "events/create";
     }
 

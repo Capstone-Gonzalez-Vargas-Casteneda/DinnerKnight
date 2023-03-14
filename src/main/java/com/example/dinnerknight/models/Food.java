@@ -18,15 +18,13 @@ public class Food {
     @Column(nullable = false, length = 1000)
     private String instructions;
 
-    @Column(length = 1000)
-    private String measurements;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
-    @ManyToMany(mappedBy = "foods")
-    private List<User> users;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "food")
     private List<Event> events;
-
 
     public Food(){}
 
