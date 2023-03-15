@@ -6,28 +6,41 @@
 .pageHeaderText{
     text-align: center;
     margin-top: 50px;
-    font-family: fantasy;
+    font-family: Luminari;
     font-size: 36px;
     font-weight: bolder;
+    background-color: #EBD396;
+    width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.landingCard{
+    border: #21152A 1px solid;
+    height: 175px;
+    width: 175px;
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 1em;
 }
 
 .landingImages{
-    min-height: 150px;
-    min-width: 150px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
-.landingCircles{
-    width: 175px;
-    border-radius: 50%;
-    background-color:#e25363;
-}
 
 .landingBoxes{
-    background-color: rebeccapurple;
-    color: antiquewhite;
-
+    background-color: #21152A;
+    color: #f4f9f7;
 }
-
+.login-form{
+    background-color: #112A3D;
+}
+.register-form{
+    background-color: #112A3D;
+}
 .submitButton{
     width: 100%;
     margin-top: 35px;
@@ -43,9 +56,9 @@
 }
 
 .member{
+    width: 260px;
     border: 3px solid black;
-    margin:30px 30px;
-    justify-content: center;
+    margin:10px 10px;
 }
 
 .theMeat{
@@ -53,6 +66,14 @@
     min-height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
+}
+
+.newButton{
+    background-color: antiquewhite;
+    border: solid black 1px;
+    text-align:center;
+    display: inline-block;
+
 }
 
 .eventCard{

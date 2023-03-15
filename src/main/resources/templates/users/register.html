@@ -2,9 +2,9 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head th:replace="~{partials :: head}">
 </head>
-<body>
+<body th:style="'background-image: url(img/3medieval-bg.jpeg)'">
 <nav th:replace="partials :: navbar"></nav>
-<main class="container theMeat">
+<main class="container theMeat register-form">
   <h1 class="pageHeaderText">Create an account</h1>
   <form th:action="@{/register}" th:method="POST" th:object="${user}">
     <div class="form-group">

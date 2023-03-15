@@ -29,20 +29,18 @@ public class Food {
     public Food(){}
 
 
-
-
-
     public Food(Food copy) {
         name = copy.name;
         ingredients = copy.ingredients;
         instructions = copy.instructions;
     }
 
-    public Food(Long id, String name, String ingredients, String measurements, String instructions) {
+    public Food(Long id, String name, String ingredients, String instructions, User user) {
         this.id = id;
         this.name = name;
         this.ingredients = ingredients;
         this.instructions = instructions;
+        this.user = user;
     }
 
     public Food( String name, String ingredients, String instructions) {
@@ -83,7 +81,14 @@ public class Food {
         this.instructions = instructions;
     }
 
+    public User getUser() {
+        return user;
+    }
 
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 }
 
 
