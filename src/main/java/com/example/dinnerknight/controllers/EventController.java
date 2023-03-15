@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
+
 @Controller
 public class EventController {
 
@@ -45,7 +47,9 @@ public class EventController {
     @GetMapping("/events/create")
     public String eventForm(Model model){
         model.addAttribute("event", new Event());
-//        model.addAttribute("foodChoice", userDao.findUserById());
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        model.addAttribute("foodChoice", userDao.findUserById(user.getId()).getFoods());
+        System.out.println(model.getAttribute("foodChoice"));
         return "events/create";
     }
 

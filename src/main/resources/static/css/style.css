@@ -6,7 +6,7 @@
 .pageHeaderText{
     text-align: center;
     margin-top: 50px;
-    font-family: fantasy;
+    font-family: Luminari;
     font-size: 36px;
     font-weight: bolder;
 }
@@ -54,9 +54,9 @@
 }
 
 .member{
+    width: 260px;
     border: 3px solid black;
-    margin:30px 30px;
-    justify-content: center;
+    margin:10px 10px;
 }
 
 .theMeat{
@@ -64,6 +64,14 @@
     min-height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
+}
+
+.newButton{
+    background-color: antiquewhite;
+    border: solid black 1px;
+    text-align:center;
+    display: inline-block;
+
 }
 
 .eventCard{
