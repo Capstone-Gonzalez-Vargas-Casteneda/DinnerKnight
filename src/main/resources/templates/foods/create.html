@@ -7,7 +7,7 @@
 
 <main class="container">
     <h1>Add a dish!</h1>
-    <form th:action="@{/foods/save}" th:method="post" th:object="${food}">
+    <form th:action="@{/foods/save}" th:method="post" th:object="${food} ">
         <div class="mb-3">
             <label for="foodName" class="form-label">Food Name: </label>
             <input type="text" name="foodName" id="foodName" class="form-control" th:field="*{name}">
