@@ -35,7 +35,6 @@ public class Food {
     public Food(Food copy) {
         name = copy.name;
         ingredients = copy.ingredients;
-        measurements = copy.measurements;
         instructions = copy.instructions;
     }
 
@@ -43,7 +42,6 @@ public class Food {
         this.id = id;
         this.name = name;
         this.ingredients = ingredients;
-        this.measurements = measurements;
         this.instructions = instructions;
     }
 
@@ -84,13 +82,7 @@ public class Food {
     public void setInstructions(String instructions) {
         this.instructions = instructions;
     }
-    public String getMeasurements() {
-        return measurements;
-    }
 
-    public void setMeasurements(String measurements) {
-        this.measurements = measurements;
-    }
 
 }
 
