@@ -67,3 +67,90 @@
     margin-right: auto;
 }
 
+/*This is Javier's Style */
+
+/* Apply styles to the body element */
+.food-index-body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Apply styles to the navigation bar */
+.food-index-nav {
+    background-color: #6c5ce7;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.food-index-nav-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.food-index-nav-link:hover {
+    text-decoration: underline;
+}
+
+/* Apply styles to the main content section */
+.food-index-content {
+    margin: 50px;
+}
+
+.food-index-header {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #6c5ce7;
+    text-shadow: 2px 2px 0 #f1c40f;
+}
+
+.food-index-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.food-index-col-12 {
+    flex: 1 0 100%;
+}
+
+.food-index-col-md-6 {
+    flex: 1 0 calc(50% - 10px);
+}
+
+/*Styling for foods view*/
+
+.food-index-item-card {
+    border: 2px solid purple;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    background-color: white;
+}
+
+.food-index-item-card-header.custom-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: gold;
+    margin-bottom: 0.5rem;
+}
+
+.food-index-item-details-link h2 {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    color: #007BFF;
+    text-decoration: underline;
+}
+
+.food-index-item-details-link h2:hover {
+    text-decoration: none;
+    color: #0056B3;
+}
+
+
+
+
+

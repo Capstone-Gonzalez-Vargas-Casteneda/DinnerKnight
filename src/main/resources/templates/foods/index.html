@@ -1,19 +1,47 @@
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">-->
+<!--<head th:replace="~{partials :: head}">-->
+<!--    <link rel="stylesheet" href="../../static/css/style.css">-->
+<!--</head>-->
+<!--<body class="food-index-body">-->
+<!--<nav th:replace="~{partials :: navbar}" class="food-index-nav"></nav>-->
+<!--<main class="food-index-content">-->
+<!--    <h1 class="food-index-header">Food Index</h1>-->
+<!--    <div class="food-index-container">-->
+<!--        <div class="food-index-col-12 food-index-col-md-6 food-index-col-lg-4 mb-3" th:each="food : ${foods}">-->
+<!--            <div class="food-index-item-card">-->
+<!--                <div class="food-index-item-card-header">Dish:</div>-->
+<!--                <div class="food-index-item-card-body">-->
+<!--                    <span th:text="${food.name}" class="food-index-item-card-text"></span>-->
+<!--                    <a th:href="@{/foods/{id} (id = ${food.id})}"><h1>Click here for more details!</h1></a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</main>-->
+<!--<div th:replace="~{partials :: foot-script}"></div>-->
+<!--</body>-->
+<!--</html>-->
+
+
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head th:replace="~{partials :: head}">
+    <link rel="stylesheet" href="../../static/css/style.css">
 </head>
-<body>
-<nav th:replace="~{partials :: navbar}"></nav>
-<main class="theMeat">
-    <h1 class="pageHeaderText">Food Index</h1>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 mb-3" th:each="food : ${foods}">
-                <h4>Food Being Served: <span th:text="${food.name}"></span></h4>
-                <br>
-                <h4>Ingredients: <span th:text="${food.ingredients}"></span></h4>
-                <br>
-                <h4>Cooking Instructions:  <span th:text="${food.instructions}"></span></h4>
+<body class="food-index-body">
+<nav th:replace="~{partials :: navbar}" class="food-index-nav"></nav>
+<main class="food-index-content">
+    <h1 class="food-index-header">Food Index</h1>
+    <div class="food-index-container">
+        <div class="food-index-col food-index-col-12 food-index-col-md-6 food-index-col-lg-4 mb-3" th:each="food : ${foods}">
+            <div class="food-index-item-card">
+                <div class="food-index-item-card-header custom-header">Dish:</div>
+                <div class="food-index-item-card-body">
+                    <span th:text="${food.name}" class="food-index-item-card-text"></span>
+                    <a th:href="@{/foods/{id} (id = ${food.id})}" class="food-index-item-details-link"><h2>Click here for more details!</h2></a>
+                </div>
             </div>
         </div>
     </div>
@@ -21,3 +49,5 @@
 <div th:replace="~{partials :: foot-script}"></div>
 </body>
 </html>
+
+
