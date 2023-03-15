@@ -14,10 +14,10 @@
         <label for="address" class="form-label">Event Location: </label>
         <input type="text" name="address" id="address" class="form-control" th:field="*{address}">
         <label for="food" class="form-label">What's being served: </label>
-        <select id="food" name="food" th:field="*{food}">
+        <select id="food" name="food" th:field="*{food}" class="form-label">
             <option value="0">select operator</option>
-            <option th:each="food : ${foodChoice}" th:value="${food}" th:text="${food.name}"></option>
-            </select>
+            <option th:each="food : ${foodChoice}" th:value="${food.id}" th:text="${food.name}"></option>
+            </select><br>
         <label for="eventDate" class="form-label">When's the Event: </label>
         <input type="date" name="food" id="eventDate" class="form-control" th:field="*{eventDate}">
         <label for="description" class="form-label"> Event Description: </label>

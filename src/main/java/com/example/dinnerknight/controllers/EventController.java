@@ -49,16 +49,13 @@ public class EventController {
         model.addAttribute("event", new Event());
         User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         model.addAttribute("foodChoice", userDao.findUserById(user.getId()).getFoods());
-        System.out.println(model.getAttribute("foodChoice"));
         return "events/create";
     }
 
     @PostMapping("/events/save")
     public String saveEvent(@ModelAttribute Event event){
         User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        Food grub = foodDao.findFoodById(1);
         event.setOwner(user);
-        event.setFood(grub);
         eventDao.save(event);
         return "redirect:/events";
     }
@@ -73,17 +70,6 @@ public class EventController {
             return "events/create";
         }
         return "redirect:/events";
-    }
-
-    @GetMapping("events/{id}/join")
-    public String joinEvent(@PathVariable long id){
-        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        Event desiredEvent = eventDao.findEventById(id);
-        if(!user.getEvents().contains(desiredEvent)){
-            user.addEvent(desiredEvent);
-        }
-
-        return "redirect:/events/" + id ;
     }
 
     @GetMapping("/events/{id}/delete")
