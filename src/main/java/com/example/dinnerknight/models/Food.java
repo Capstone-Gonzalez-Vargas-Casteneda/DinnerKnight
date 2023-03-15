@@ -81,7 +81,6 @@ public class Food {
         this.instructions = instructions;
     }
 
-
     public User getUser() {
         return user;
     }
