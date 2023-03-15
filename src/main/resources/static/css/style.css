@@ -17,7 +17,7 @@ navbar-brand {
 .pageHeaderText {
     text-align: center;
     margin-top: 50px;
-    font-family: Luminari;
+    font-family: fantasy;
     font-size: 36px;
     font-weight: bolder;
     background-color: #EBD396;
@@ -43,6 +43,13 @@ navbar-brand {
 }
 
 
+.landingCircles{
+    width: 175px;
+    border-radius: 50%;
+    background-color:#e25363;
+}
+
+
 .landingBoxes {
     background-color: #21152A;
     color: #f4f9f7;
@@ -60,7 +67,14 @@ navbar-brand {
     color: #f4f9f7;
 }
 
-.submitButton {
+
+.landingBoxes{
+    background-color: rebeccapurple;
+    color: antiquewhite;
+
+}
+
+.submitButton{
     width: 100%;
     margin-top: 35px;
     background-color: dimgrey;
@@ -75,6 +89,7 @@ navbar-brand {
     color: antiquewhite;
 }
 
+
 .member {
     width: 260px;
     border: 3px solid black;
@@ -88,6 +103,7 @@ navbar-brand {
     justify-content: flex-start;
 }
 
+
 .newButton {
     background-color: antiquewhite;
     border: solid black 1px;
@@ -96,7 +112,8 @@ navbar-brand {
 
 }
 
-.eventCard {
+
+.eventCard{
     text-align: center;
     border: 5px solid black;
     background-color: rebeccapurple;
@@ -162,36 +179,97 @@ navbar-brand {
     flex: 1 0 calc(50% - 10px);
 }
 
-/*Styling for foods view*/
+.food-index-col-lg-4 {
+    flex: 1 0 calc(33.33% - 10px);
+}
+
+/* Apply styles to each food item card */
+.food-index-item-card {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 2px 2px 0 #f1c40f;
+    display: flex;
+    flex-direction: column;
+}
+
+.food-index-item-card-header {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #6c5ce7;
+    padding: 10px;
+    background-color: #f9ca24;
+}
+
+.food-index-item-card-body {
+    padding: 10px;
+}
+
+.food-index-item-card-text {
+    font-size: 1em;
+    font-weight: normal;
+    color: #333;
+}
+
+/* Purple and gold theme */
+.food-index-body {
+    background-color: #f4f4f4;
+}
+
+.food-index-nav {
+    background-color: #6c5ce7;
+    color: #fff;
+}
+
+.food-index-header {
+    color: #6c5ce7;
+    text-shadow: 2px 2px 0 #f1c40f;
+}
+
+.food-index-item-card-header {
+    color: #6c5ce7;
+    background-color: #f9ca24;
+}
 
 .food-index-item-card {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 2px 2px 0 #f1c40f;
+}
+
+.food-index-item-card-text {
+    color: #333;
+}
+
+/*Style for view*/
+.custom-thumbnail {
     border: 2px solid purple;
+}
+
+.food-card {
+    background-color: white;
+    padding: 1rem;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    background-color: white;
 }
 
-.food-index-item-card-header.custom-header {
-    font-size: 1.5rem;
+.page-header-text {
+    color: purple;
     font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.created-by {
     color: gold;
-    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
 }
 
-.food-index-item-details-link h2 {
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-    color: #007BFF;
-    text-decoration: underline;
+.creator-username {
+    color: purple;
 }
-
-.food-index-item-details-link h2:hover {
-    text-decoration: none;
-    color: #0056B3;
-}
-
-
 
 
 
