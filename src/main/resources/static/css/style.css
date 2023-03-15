@@ -1,9 +1,20 @@
-.nb{
+.nb {
     background-color: rebeccapurple;
     color: antiquewhite;
 }
 
-.pageHeaderText{
+navbar-brand {
+    color: #f4f9f7;
+}
+.link{
+    align-self: center;
+}
+
+.background {
+    background-image: url("../img/3medieval-bg.jpeg")
+}
+
+.pageHeaderText {
     text-align: center;
     margin-top: 50px;
     font-family: Luminari;
@@ -14,7 +25,8 @@
     margin-right: auto;
     margin-left: auto;
 }
-.landingCard{
+
+.landingCard {
     border: #21152A 1px solid;
     height: 175px;
     width: 175px;
@@ -24,30 +36,38 @@
     margin-top: 1em;
 }
 
-.landingImages{
+.landingImages {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
 
-.landingBoxes{
+.landingBoxes {
     background-color: #21152A;
     color: #f4f9f7;
 }
-.login-form{
+
+.login-form {
     background-color: #112A3D;
+    padding: 1em;
+    color: #f4f9f7;
 }
-.register-form{
+
+.register-form {
     background-color: #112A3D;
+    padding: 1em;
+    color: #f4f9f7;
 }
-.submitButton{
+
+.submitButton {
     width: 100%;
     margin-top: 35px;
     background-color: dimgrey;
     text-align: center;
 }
-.siteCard{
+
+.siteCard {
     text-align: left;
     border: 5px solid black;
     background-color: rebeccapurple;
@@ -55,28 +75,28 @@
     color: antiquewhite;
 }
 
-.member{
+.member {
     width: 260px;
     border: 3px solid black;
-    margin:10px 10px;
+    margin: 10px 10px;
 }
 
-.theMeat{
+.theMeat {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
 }
 
-.newButton{
+.newButton {
     background-color: antiquewhite;
     border: solid black 1px;
-    text-align:center;
+    text-align: center;
     display: inline-block;
 
 }
 
-.eventCard{
+.eventCard {
     text-align: center;
     border: 5px solid black;
     background-color: rebeccapurple;
