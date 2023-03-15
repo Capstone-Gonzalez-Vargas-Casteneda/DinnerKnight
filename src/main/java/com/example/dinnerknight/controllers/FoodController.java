@@ -73,36 +73,6 @@ public class FoodController {
     }
 
 
-    @GetMapping("/food/{id}")
-    public String getFoodDetails(@PathVariable int id, Model model) {
-        try {
-
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:8080/mydatabase", "root", "codeup");
-
-
-            PreparedStatement stmt = conn.prepareStatement("SELECT name, instructions, ingredients, measurements FROM food WHERE id = ?");
-            stmt.setInt(1, id);
-
-
-            ResultSet rs = stmt.executeQuery();
-
-
-            if (rs.next()) {
-                Food food = new Food();
-                food.setName(rs.getString("name"));
-                food.setInstructions(rs.getString("instructions"));
-                food.setIngredients(rs.getString("ingredients"));
-                food.setMeasurements(rs.getString("measurements"));
-
-                model.addAttribute("food", food);
-            }
-
-            return "foodDetails";
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return "error";
-        }
-    }
 
 }
 
