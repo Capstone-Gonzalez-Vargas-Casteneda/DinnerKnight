@@ -1,15 +1,24 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>Food Details</title>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="~{partials :: head}">
 </head>
 <body>
-<h2>Food Details</h2>
-<ul>
-    <li><span th:text="${food.name}"></span></li>
-    <li><span th:text="${food.instructions}"></span></li>
-    <li><span th:text="${food.ingredients}"></span></li>
-    <li><span th:text="${food.measurements}"></span></li>
-</ul>
+<nav th:replace="~{partials :: navbar}"></nav>
+<main>
+    <div class="container">
+        <div class="d-flex row">
+            <div class="col-sm-4">
+                <img alt="foodPhoto" class="img-thumbnail">
+            </div>
+            <div class=" col-sm-8 foodCard">
+                <h1 th:text="${food.name}" class="pageHeaderText"></h1>
+                <h2 th:text="${food.ingredients}" class="pageHeaderText"></h2>
+                <h2 th:text="${food.instructions}" class="pageHeaderText"></h2>
+            </div>
+
+        </div>
+    </div>
+</main>
+<div th:replace="partials :: foot-script"></div>
 </body>
 </html>

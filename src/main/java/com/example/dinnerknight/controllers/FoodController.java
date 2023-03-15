@@ -72,6 +72,12 @@ public class FoodController {
         return "redirect:/foods";
     }
 
+    @GetMapping("/foods/{id}")
+    public String foodShow(Model model ,@PathVariable long id){
+        model.addAttribute("food",foodDao.findFoodById(id));
+        return "foods/show";
+    }
+
 
 }
 
