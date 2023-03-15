@@ -46,6 +46,7 @@ public class FoodController {
 
     @PostMapping("/foods/save")
     public String saveFood(@ModelAttribute Food food) {
+        food.setUser((User) SecurityContextHolder.getContext().getAuthentication().getPrincipal());
         foodDao.save(food);
         return "redirect:/foods";
     }
