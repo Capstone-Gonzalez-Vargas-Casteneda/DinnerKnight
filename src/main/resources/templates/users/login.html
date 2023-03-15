@@ -2,12 +2,12 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head th:replace="~{partials :: head}">
 </head>
-<body>
+<body th:style="'background-image: url(img/3medieval-bg.jpeg)'">
 <nav th:replace="partials :: navbar"></nav>
 <main class="container theMeat">
   <h1 class="pageHeaderText">Log In</h1>
   <form th:action="@{/login}" method="post">
-    <div class="mb-3">
+    <div class="mb-3 login-form">
       <label for="username" class="form-label">Username:</label>
       <input id="username" name="username" type="text" class="form-control" />
       <label for="password" class="form-label">Password:</label>
