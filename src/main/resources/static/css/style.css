@@ -106,7 +106,6 @@ p.link{
     min-height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
-    background-image: url("static/img/3medieval-bg.jpeg");
 }
 
 
