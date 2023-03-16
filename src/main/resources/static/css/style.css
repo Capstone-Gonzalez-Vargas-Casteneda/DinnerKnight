@@ -154,7 +154,7 @@ p.link{
 
 /* Apply styles to the navigation bar */
 .food-index-nav {
-    background-color: #6c5ce7;
+    color: rebeccapurple;
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -178,7 +178,7 @@ p.link{
 .food-index-header {
     font-size: 3em;
     margin-bottom: 20px;
-    color: #6c5ce7;
+    color: rebeccapurple;
     text-shadow: 2px 2px 0 #f1c40f;
 }
 
@@ -214,7 +214,7 @@ p.link{
     font-size: 1.2em;
     font-weight: bold;
     margin-bottom: 10px;
-    color: #6c5ce7;
+    color: rebeccapurple;
     padding: 10px;
     background-color: #f9ca24;
 }
@@ -235,17 +235,21 @@ p.link{
 }
 
 .food-index-nav {
-    background-color: #6c5ce7;
+    color: rebeccapurple;
     color: #fff;
 }
 
 .food-index-header {
-    color: #6c5ce7;
+    color: rebeccapurple;
     text-shadow: 2px 2px 0 #f1c40f;
 }
 
+.food-index-item-details-link{
+    color: rebeccapurple;
+}
+
 .food-index-item-card-header {
-    color: #6c5ce7;
+    color: rebeccapurple;
     background-color: #f9ca24;
 }
 
@@ -286,6 +290,27 @@ p.link{
 
 .creator-username {
     color: purple;
+}
+
+/*last minute edits*/
+
+.logbtn {
+    background-color: rebeccapurple; /* Background color of the button */
+    color: gold; /* Text color */
+    font-size: 10px; /* Adjust the font size as needed */
+    font-weight: bold; /* Make the text bold */
+    border: 2px solid gold; /* Gold border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 2px 2px;
+    padding-bottom: 2px;
+    cursor: pointer; /* Change cursor to pointer when hovering */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.purple-gold-button:hover {
+    background-color: gold; /* Change background color to gold on hover */
+    color: rebeccapurple; /* Change text color to purple on hover */
+    border-color: rebeccapurple; /* Change border color to purple on hover */
 }
 
 
