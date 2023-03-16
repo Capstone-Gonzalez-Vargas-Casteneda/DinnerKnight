@@ -7,6 +7,7 @@
 <main>
     <div class="container">
     <div class="d-flex row">
+        <h1 class="pageHeaderText"><span th:text="${event.name}"></span>'s Details !</h1>
         <div class=" col-sm-8 eventCard">
             <h1 th:text="${event.name}" class=" "></h1><br>
             <h4>Created By: <span th:text="${event.owner.username}"></span></h4>

@@ -1,3 +1,38 @@
+.navbar-nav {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.DK-logo {
+    text-decoration: none;
+    color: inherit; /* Use the parent element's text color */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.DK-logo:hover {
+    color: white; /* Change text color to white on hover */
+}
+
+
+
+.nav-item {
+    margin-right: 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: white; /* Change text color to white on hover */
+}
+
+
+
 /*NavBar*/
 .nb {
 
@@ -22,6 +57,10 @@
     font-size: x-large;
 }
 
+.but-border {
+    border: 2px solid #EBD396;
+}
+
 navbar-brand {
     color: #f4f9f7;
 }
@@ -40,13 +79,14 @@ navbar-brand {
     font-family: Luminari;
     font-size: 42px;
     font-weight: bolder;
+    border: 3px black solid;
     background-color: #EBD396;
-    width: 450px;
+    min-height: 2em;
+    width: 60%;
     margin-right: auto;
     margin-left: auto;
     padding: .25em;
     border-radius: .5em;
-    border: #21152A solid 1px;
 }
 
 .landingCard {
@@ -117,11 +157,11 @@ p.link{
 /*Login & Register*/
 
 .siteCard {
-    text-align: left;
+    text-align: center;
     border: 5px solid black;
     background-color: rebeccapurple;
     min-width: 25%;
-    color: antiquewhite;
+    color: #EBD396;
 }
 
 /*AboutUs*/
@@ -219,10 +259,9 @@ p.link{
 }
 
 .food-index-header {
+    font-family: Luminari;
     font-size: 3em;
     margin-bottom: 20px;
-    color: rebeccapurple;
-    text-shadow: 2px 2px 0 #f1c40f;
 }
 
 .food-index-container {
@@ -246,15 +285,15 @@ p.link{
 /* Apply styles to each food item card */
 .food-index-item-card {
     margin-bottom: 20px;
-    border: 1px solid #ccc;
+    border: black;
     background-color: #fff;
-    box-shadow: 2px 2px 0 #f1c40f;
     display: flex;
     flex-direction: column;
 }
 
 .food-index-item-card-header {
-    font-size: 1.2em;
+    font-family: Luminari;
+    font-size: 1em;
     font-weight: bold;
     margin-bottom: 10px;
     color: rebeccapurple;
@@ -267,6 +306,7 @@ p.link{
 }
 
 .food-index-item-card-text {
+    font-family: Luminari;
     font-size: 1em;
     font-weight: normal;
     color: #333;
@@ -274,7 +314,7 @@ p.link{
 
 /* Purple and gold theme */
 .food-index-body {
-    background-color: #f4f4f4;
+    background-color: rebeccapurple;
 }
 
 .food-index-nav {
@@ -282,28 +322,34 @@ p.link{
     color: #fff;
 }
 
+.food-index-item-card-body {
+    color: rebeccapurple;
+}
+
 .food-index-header {
     color: rebeccapurple;
-    text-shadow: 2px 2px 0 #f1c40f;
 }
 
 .food-index-item-details-link{
-    color: rebeccapurple;
+    color: #EBD396;
+    font-family: Luminari;
+    font-size: 12px;
+    text-decoration: none;
 }
 
 .food-index-item-card-header {
     color: rebeccapurple;
-    background-color: #f9ca24;
+    background-color: #EBD396;
 }
 
 .food-index-item-card {
-    border: 1px solid #ccc;
-    background-color: #fff;
-    box-shadow: 2px 2px 0 #f1c40f;
+    border: 2px solid black;
+    background-color: rebeccapurple;
 }
 
 .food-index-item-card-text {
-    color: #333;
+    color: black;
+    font-size: 1.2em;
 }
 
 /*Style for view*/
@@ -312,7 +358,7 @@ p.link{
 }
 
 .food-card {
-    background-color: white;
+    background-color: #EBD396;
     padding: 1rem;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
