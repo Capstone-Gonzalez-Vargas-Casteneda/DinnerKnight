@@ -65,10 +65,7 @@ navbar-brand {
     color: #f4f9f7;
 }
 /*Navbar*/
-.link{
-    margin-top: 1.5em;
-    text-align: center;
-}
+
 /*Background*/
 .background {
     background-image: url("../img/3medieval-bg.jpeg")
@@ -128,11 +125,11 @@ p.link{
 .landingBoxes {
     padding-top: .4em;
     background-color: #21152A;
-    /*color: #f4f9f7;*/
     border-radius: 1em;
 }
 /*Landing Page*/
 
+/*Login & Register*/
 .login-form {
     background-color: #112A3D;
     padding: 1em;
@@ -145,13 +142,19 @@ p.link{
     color: #f4f9f7;
 }
 
-
 .submitButton{
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    width: 25%;
     margin-top: 35px;
-    background-color: dimgrey;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #EBD396;
+    font-family: Luminari;
+    color: #21152A;
     text-align: center;
 }
+/*Login & Register*/
 
 .siteCard {
     text-align: center;
