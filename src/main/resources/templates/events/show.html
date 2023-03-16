@@ -7,15 +7,14 @@
 <main>
     <div class="container">
     <div class="d-flex row">
-        <div class="col-sm-4">
-            <img alt="eventPhoto" class="img-thumbnail">
-        </div>
         <div class=" col-sm-8 eventCard">
-            <h1 th:text="${event.name}" class="pageHeaderText "></h1><br>
+            <h1 th:text="${event.name}" class=" "></h1><br>
             <h4>Created By: <span th:text="${event.owner.username}"></span></h4>
             <h4> Event Location: <span th:text="${event.address}"></span></h4>
             <h4>Food Being Served: <a th:href="@{/foods/{id} (id = ${event.id})}"><span th:text="${event.food.name}"></span></a></h4>
-            <a th:href="@{/events/{id}/join  (id = ${event.id})}"><Button class="newButton">this is a test</Button></a>
+            <label for="description">Description:</label>
+            <p id="description" th:text="${event.description}"></p>
+            <p> If you are interested in attending contact the creator: <span th:text="${event.owner.email}"></span></p>
         </div>
         <a th:href="@{/events}" class="d-flex justify-content-center"><button class="newButton">Return to events</button></a>
     </div>
