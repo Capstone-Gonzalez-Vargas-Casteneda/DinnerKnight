@@ -7,14 +7,14 @@
 <body class="food-index-body background">
 <nav th:replace="~{partials :: navbar}" class="food-index-nav"></nav>
 <main class="food-index-content">
-    <h1 class="pageHeaderText">Food Index</h1>
+    <h1 class="pageHeaderText">Recipes</h1>
     <div class="food-index-container">
         <div class="food-index-col food-index-col-12 food-index-col-md-6 food-index-col-lg-4 mb-3" th:each="food : ${foods}">
             <div class="food-index-item-card">
                 <div class="food-index-item-card-header custom-header">Recipe:</div>
                 <div class="food-index-item-card-body">
                     <span th:text="${food.name}" class="food-index-item-card-text"></span>
-                    <a th:href="@{/foods/{id} (id = ${food.id})}" class="food-index-item-details-link"><p>Click here for more details!</p></a>
+                    <a th:href="@{/foods/{id} (id = ${food.id})}" class="food-index-item-details-link pageLink"><p>Click here for more details!</p></a>
                 </div>
             </div>
         </div>

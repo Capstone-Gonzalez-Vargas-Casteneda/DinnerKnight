@@ -194,6 +194,7 @@ navbar-brand {
     font-size: 1.5em;
     padding-left: 1.5em;
     margin-top: .2em;
+    margin-bottom: .3em;
     color: #EBD396;
 }
 /*AboutUs*/
@@ -362,7 +363,7 @@ navbar-brand {
 }
 
 .food-index-item-card-text {
-    color: black;
+    color: #F4f9f7;
     font-size: 1.2em;
 }
 
