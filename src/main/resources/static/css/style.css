@@ -398,23 +398,19 @@ navbar-brand {
 /*last minute edits*/
 
 .logbtn {
-    background-color: rebeccapurple; /* Background color of the button */
-    color: gold; /* Text color */
-    font-size: 10px; /* Adjust the font size as needed */
+    background-color: rebeccapurple;
+
+    color: #EBD396; /* Text color */
+    font-size: 12px; /* Adjust the font size as needed */
     font-weight: bold; /* Make the text bold */
-    border: 2px solid gold; /* Gold border */
+    border: 2px #EBD396; /* Gold border */
     border-radius: 5px; /* Rounded corners */
     padding: 2px 2px;
-    padding-bottom: 2px;
+    padding-bottom: 2.5px;
     cursor: pointer; /* Change cursor to pointer when hovering */
     transition: all 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.purple-gold-button:hover {
-    background-color: gold; /* Change background color to gold on hover */
-    color: rebeccapurple; /* Change text color to purple on hover */
-    border-color: rebeccapurple; /* Change border color to purple on hover */
-}
 
 
 
