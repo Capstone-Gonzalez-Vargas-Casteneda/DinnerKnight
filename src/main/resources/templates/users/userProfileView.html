@@ -6,8 +6,8 @@
 <nav th:replace="partials :: navbar"></nav>
 <main class="container theMeat">
     <h1 class="pageHeaderText">Welcome, <span th:text="${#authentication.principal.username}"></span></h1>
-    <div class=" flex-nowrap row my-4">
-        <div class="siteCard col-sm-8">
+    <div class="my-5">
+        <div class="siteCard col-sm-6 mx-auto">
             <p>First Name: <span th:text="${#authentication.principal.firstName}"></span></p>
             <p>Last Name: <span th:text="${#authentication.principal.lastName}"></span></p>
             <p>Email: <span th:text="${#authentication.principal.email}"></span></p>

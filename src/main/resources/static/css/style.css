@@ -22,6 +22,10 @@
     font-size: x-large;
 }
 
+.but-border {
+    border: 2px solid #EBD396;
+}
+
 navbar-brand {
     color: #f4f9f7;
 }
@@ -40,11 +44,14 @@ navbar-brand {
 .pageHeaderText {
     text-align: center;
     margin-top: 50px;
+    padding-top:.3em;
     font-family: Luminari;
     font-size: 42px;
     font-weight: bolder;
+    border: 3px black solid;
     background-color: #EBD396;
-    width: 500px;
+    min-height: 2em;
+    /*width: 500px;*/
     margin-right: auto;
     margin-left: auto;
 }
@@ -102,11 +109,11 @@ p.link{
 }
 
 .siteCard {
-    text-align: left;
+    text-align: center;
     border: 5px solid black;
     background-color: rebeccapurple;
     min-width: 25%;
-    color: antiquewhite;
+    color: #EBD396;
 }
 
 /*AboutUs*/

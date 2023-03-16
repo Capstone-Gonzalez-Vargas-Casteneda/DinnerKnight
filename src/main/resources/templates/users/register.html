@@ -4,10 +4,10 @@
 </head>
 <body class="background">
 <nav th:replace="partials :: navbar"></nav>
-<main class="container theMeat register-form">
+<main class="container theMeat ">
   <h1 class="pageHeaderText">Create an account</h1>
   <form th:action="@{/register}" th:method="POST" th:object="${user}">
-    <div class="form-group">
+    <div class="form-group register-form">
       <label for="firstName" class="form-label">First Name:</label>
       <input type="text" id="firstName" th:field="*{firstName}" name="firstName" class="form-control" required>
       <label for="lastName" class="form-label">Last Name:</label>
@@ -19,8 +19,8 @@
       <label for="password" class="form-label">Password:</label>
       <input type="password" id="password" th:field="*{password}" name="password" class="form-control" required>
       <input type="hidden" th:field="*{id}">
-    </div>
     <button type="submit" class="submitButton ">Register</button>
+    </div>
   </form>
 </main>
 <div th:replace="partials :: foot-script"></div>
