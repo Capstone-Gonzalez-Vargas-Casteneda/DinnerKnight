@@ -6,30 +6,34 @@
 <nav th:replace="~{partials :: navbar}"></nav>
 
 <main class="container theMeat">
-<h1 class="pageHeaderText">The Knights: </h1>
-<section class="team row mx-auto flex-nowrap">
-  <div class="member col-3">
-    <h5 class="text-center my-1">Matthew Gonzalez</h5>
-    <img src="img/Matthew_Gonzalez_headshot.jpg" alt="Member 1" >
-    <a th:href="@{https://www.linkedin.com/in/matthewstevengonzalez/}"><i class="fa-brands fa-linkedin"></i></a>
-    <a th:href="@{https://github.com/Matthew-Steven-Gonzalez}"><i class="fa-brands fa-github"></i></a>
-    <a th:href="@{https://alumni.codeup.com/students/1772}"><i class="fa-solid fa-graduation-cap"></i></a>
-  </div>
-  <div class="member col-3">
-    <h5 class="text-center my-1">Jonathan Vargas</h5>
-    <img src="img/Jon_Vargas_headshot.jpg" alt="Member 2">
-    <a th:href="@{https://www.linkedin.com/in/jonathan-vargas-78b17925a/}"><i class="fa-brands fa-linkedin"></i></a>
-    <a th:href="@{https://github.com/Jonathanvra}"><i class="fa-brands fa-github"></i></a>
-    <a th:href="@{https://alumni.codeup.com/students/1771}"><i class="fa-solid fa-graduation-cap"></i></a>
-  </div>
-  <div class="member col-3 justify-content-center">
-    <h5 class="text-center my-1">Javier Castaneda</h5>
-    <img src="img/Javier_Castaneda_headshot.jpg" alt="Member 3"><br>
-    <a th:href="@{https://www.linkedin.com/in/javier-castaneda-45a95a258/}"><i class="fa-brands fa-linkedin"></i></a>
-    <a th:href="@{https://github.com/JavierCastaneda1}"><i class="fa-brands fa-github"></i></a>
-    <a th:href="@{https://alumni.codeup.com/students/1784}"><i class="fa-solid fa-graduation-cap"></i></a>
-  </div>
-</section>
+    <h1 class="pageHeaderText">The Knights: </h1>
+    <div class="container">
+        <section class="team row mx-auto flex-nowrap">
+            <div class="member col-4">
+                <h5 class="text-center my-1">Matthew Gonzalez</h5>
+                <img src="img/Matthew_Gonzalez_headshot.jpg" alt="Member 1">
+                <a th:href="@{https://www.linkedin.com/in/matthewstevengonzalez/}"><i class="fa-brands fa-linkedin"></i></a>
+                <a th:href="@{https://github.com/Matthew-Steven-Gonzalez}"><i class="fa-brands fa-github"></i></a>
+                <a th:href="@{https://alumni.codeup.com/students/1772}"><i class="fa-solid fa-graduation-cap"></i></a>
+            </div>
+            <div class="member col-4">
+                <h5 class="text-center my-1">Jonathan Vargas</h5>
+                <img src="img/Jon_Vargas_headshot.jpg" alt="Member 2">
+                <a th:href="@{https://www.linkedin.com/in/jonathan-vargas-78b17925a/}"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a th:href="@{https://github.com/Jonathanvra}"><i class="fa-brands fa-github"></i></a>
+                <a th:href="@{https://alumni.codeup.com/students/1771}"><i class="fa-solid fa-graduation-cap"></i></a>
+            </div>
+            <div class="member col-4 justify-content-center">
+                <h5 class="text-center my-1">Javier Castaneda</h5>
+                <img src="img/Javier_Castaneda_headshot.jpg" alt="Member 3"><br>
+                <a th:href="@{https://www.linkedin.com/in/javier-castaneda-45a95a258/}"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a th:href="@{https://github.com/JavierCastaneda1}"><i class="fa-brands fa-github"></i></a>
+                <a th:href="@{https://alumni.codeup.com/students/1784}"><i class="fa-solid fa-graduation-cap"></i></a>
+            </div>
+        </section>
+    </div>
 </main>
 <div th:replace="partials :: foot-script"></div>
 </body>
