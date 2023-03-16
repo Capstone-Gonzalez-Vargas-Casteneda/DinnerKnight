@@ -115,6 +115,10 @@ navbar-brand {
     padding-top: 0.2em;
     color: #f4f9f7;
 }
+
+.blurb {
+    font-size: x-large;
+}
 .shield2{
     color: #EBD396;
 }
@@ -122,8 +126,9 @@ navbar-brand {
 
 .landingBoxes {
     padding-top: .4em;
-    background-color: #21152A;
+    background-color: rebeccapurple;
     border-radius: 1em;
+    border: solid 3px black;
 }
 /*Landing Page*/
 
