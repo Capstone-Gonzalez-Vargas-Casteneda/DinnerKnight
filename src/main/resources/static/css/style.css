@@ -105,6 +105,7 @@ navbar-brand {
     object-fit: cover;
 }
 .landing-text{
+    font-family: Luminari;
     color: #f4f9f7;
 }
 .fa-solid, .fas{
@@ -118,9 +119,6 @@ navbar-brand {
     color: #EBD396;
 }
 
-p.link{
-    margin-bottom: 0;
-}
 
 .landingBoxes {
     padding-top: .4em;
