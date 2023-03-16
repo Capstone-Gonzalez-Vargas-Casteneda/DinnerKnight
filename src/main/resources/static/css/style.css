@@ -157,6 +157,17 @@ navbar-brand {
     color: #21152A;
     text-align: center;
 }
+
+.logoutbtn{
+    display: flex;
+    justify-content: flex-start;
+    margin-left: .1em;
+    background-color: #EBD396;
+    font-family: Luminari;
+    color: #21152A;
+    text-align: center;
+}
+
 /*Login & Register*/
 
 .siteCard {
