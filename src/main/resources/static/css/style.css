@@ -181,6 +181,7 @@ navbar-brand {
     border: 5px solid black;
     background-color: rebeccapurple;
     min-width: 25%;
+    padding-bottom: .7em;
     color: #EBD396;
 }
 
@@ -405,15 +406,14 @@ navbar-brand {
 /*last minute edits*/
 
 .logbtn {
-    background-color: rebeccapurple;
+    background-color: #EBD396;
 
-    color: #EBD396; /* Text color */
+    color: black; /* Text color */
     font-size: 12px; /* Adjust the font size as needed */
     font-weight: bold; /* Make the text bold */
-    border: 2px #EBD396; /* Gold border */
+    border: 1px black solid; /* Gold border */
     border-radius: 5px; /* Rounded corners */
-    padding: 2px 2px;
-    padding-bottom: 2.5px;
+    padding: 4px 4px;
     cursor: pointer; /* Change cursor to pointer when hovering */
     transition: all 0.3s ease; /* Smooth transition for hover effect */
 }
