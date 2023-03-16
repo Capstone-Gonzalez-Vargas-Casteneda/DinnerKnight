@@ -1,7 +1,6 @@
 .nb {
 
-    background-color: #21152A;
-    color: antiquewhite;
+    background-color: rebeccapurple;
 }
 
 .nb a{
@@ -12,6 +11,7 @@
 navbar-brand {
     color: #f4f9f7;
 }
+
 .link{
     margin-top: 1.5em;
     text-align: center;
