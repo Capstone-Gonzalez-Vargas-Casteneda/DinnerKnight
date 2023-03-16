@@ -9,7 +9,7 @@
     <div class="d-flex row">
         <h1 class="pageHeaderText"><span th:text="${event.name}"></span>'s Details !</h1>
         <div class=" col-sm-8 eventCard">
-            <h1 th:text="${event.name}" class=" "></h1><br>
+            <h1 th:text="${event.name}" class="mt-2"></h1><br>
             <h4>Created By: <span th:text="${event.owner.username}"></span></h4>
             <h4> Event Location: <span th:text="${event.address}"></span></h4>
             <h4>Food Being Served: <a th:href="@{/foods/{id} (id = ${event.food.id})}"><span th:text="${event.food.name}"></span></a></h4>
