@@ -1,5 +1,5 @@
 .nb {
-    background-color: rebeccapurple;
+    background-color: #21152A;
     color: antiquewhite;
 }
 
@@ -7,7 +7,8 @@ navbar-brand {
     color: #f4f9f7;
 }
 .link{
-    align-self: center;
+    margin-top: 1.5em;
+    text-align: center;
 }
 
 .background {
@@ -44,11 +45,15 @@ navbar-brand {
 
 
 .landingCircles{
-    width: 175px;
-    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    /*border-radius: 50%;*/
     background-color:#e25363;
+    align-self: center;
 }
-
+p.link{
+    margin-bottom: 0;
+}
 
 .landingBoxes {
     background-color: #21152A;
@@ -67,12 +72,6 @@ navbar-brand {
     color: #f4f9f7;
 }
 
-
-.landingBoxes{
-    background-color: rebeccapurple;
-    color: antiquewhite;
-
-}
 
 .submitButton{
     width: 100%;
