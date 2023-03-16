@@ -7,14 +7,11 @@
 <main class="container theMeat">
     <h1 class="pageHeaderText">Welcome, <span th:text="${#authentication.principal.username}"></span></h1>
     <div class=" flex-nowrap row my-4">
-        <div class="displayPhoto col-sm-5">
-            <img src="#" alt="Profile Picture Goes Here">
-        </div>
         <div class="siteCard col-sm-8">
             <p>First Name: <span th:text="${#authentication.principal.firstName}"></span></p>
             <p>Last Name: <span th:text="${#authentication.principal.lastName}"></span></p>
             <p>Email: <span th:text="${#authentication.principal.email}"></span></p>
-            <a th:href="@{/profile/{id}/edit (id = ${#authentication.principal.id})}">Edit Profile</a>
+            <a class="logbtn" th:href="@{/profile/{id}/edit (id = ${#authentication.principal.id})}">Edit Profile</a>
         </div>
     </div>
     <hr class="height:20px">
