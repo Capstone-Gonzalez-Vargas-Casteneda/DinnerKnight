@@ -1,3 +1,38 @@
+.navbar-nav {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.DK-logo {
+    text-decoration: none;
+    color: inherit; /* Use the parent element's text color */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.DK-logo:hover {
+    color: white; /* Change text color to white on hover */
+}
+
+
+
+.nav-item {
+    margin-right: 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: white; /* Change text color to white on hover */
+}
+
+
+
 /*NavBar*/
 .nb {
 
