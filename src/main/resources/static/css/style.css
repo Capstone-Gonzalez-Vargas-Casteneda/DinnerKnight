@@ -5,6 +5,12 @@
     margin: 0;
 }
 
+.pageLink{
+    font-style: italic;
+    text-decoration: underline;
+    color:darkgoldenrod;
+}
+
 .DK-logo {
     text-decoration: none;
     color: inherit; /* Use the parent element's text color */
