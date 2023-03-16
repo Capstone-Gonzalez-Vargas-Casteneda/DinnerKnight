@@ -1,11 +1,24 @@
 .nb {
 
     background-color: rebeccapurple;
+    font-family: Luminari;
+
 }
 
 .nb a{
     color: #EBD396;
 
+}
+
+.questButton {
+    padding: 5px;
+    background-color: #EBD396;
+    color: black;
+}
+
+
+.DK-logo {
+    font-size: x-large;
 }
 
 navbar-brand {
@@ -24,8 +37,8 @@ navbar-brand {
 .pageHeaderText {
     text-align: center;
     margin-top: 50px;
-    font-family: fantasy;
-    font-size: 36px;
+    font-family: Luminari;
+    font-size: 42px;
     font-weight: bolder;
     background-color: #EBD396;
     width: 500px;
