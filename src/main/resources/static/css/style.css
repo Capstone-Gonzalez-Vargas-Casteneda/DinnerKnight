@@ -1,6 +1,12 @@
 .nb {
+
     background-color: #21152A;
     color: antiquewhite;
+}
+
+.nb a{
+    color: #EBD396;
+
 }
 
 navbar-brand {
@@ -84,7 +90,7 @@ p.link{
     text-align: left;
     border: 5px solid black;
     background-color: rebeccapurple;
-    min-width: 65%;
+    min-width: 25%;
     color: antiquewhite;
 }
 
@@ -100,6 +106,7 @@ p.link{
     min-height: 100vh;
     flex-direction: column;
     justify-content: flex-start;
+    background-image: url("static/img/3medieval-bg.jpeg");
 }
 
 
@@ -108,7 +115,6 @@ p.link{
     border: solid black 1px;
     text-align: center;
     display: inline-block;
-
 }
 
 
@@ -117,11 +123,24 @@ p.link{
     border: 5px solid black;
     background-color: rebeccapurple;
     min-width: 65%;
-    min-height: 350px;
-    color: antiquewhite;
+    color: #EBD396;
     margin-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.eventCard a {
+    color: #EBD396;
+    text-decoration: none;
+}
+.eventCard h1{
+    font-weight: bold;
+    font-family: Luminari;
+}
+
+.eventCard p {
+    font-style: italic;
+
 }
 
 /*This is Javier's Style */

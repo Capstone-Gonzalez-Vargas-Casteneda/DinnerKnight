@@ -24,9 +24,9 @@ public class dataFeeder implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-            feedDataUsers();
-
-            feedDataFood();
+//            feedDataUsers();
+//
+//            feedDataFood();
     }
 
     private void feedDataUsers(){
@@ -50,7 +50,7 @@ public class dataFeeder implements CommandLineRunner {
                     "Add heavy cream and butter to a large skillet over medium heat until the cream bubbles and the butter melts.\n" +
                     "Whisk in parmesan and add seasoning (salt and black pepper).\n" +
                     "Let the sauce thicken slightly and then add the pasta and toss until coated in sauce.\n" +
-                    "Garnish with parsley, and it's ready." );
+                    "Garnish with parsley, and it's ready.");
             Food food2 = new Food("Burek", "1 Packet Filo Pastry, 150g Minced Beef, 150g Onion, 40g Olive oil, Dash Salt, Dash Pepper", "Fry the finely chopped onions and minced meat in oil.\n" +
                     "Add the salt and pepper.\n" +
                     "Grease a round baking tray and put a layer of pastry in it.\n" +
@@ -93,6 +93,15 @@ public class dataFeeder implements CommandLineRunner {
                     "Using half the batter, spoon two pancakes into the pan, cook for 1-2 mins each side, then tip onto a plate.\n" +
                     "Repeat the process with the remaining oil and batter.\n" +
                     "Top the pancakes with the pecans and raspberries.");
+
+            food1.setUser(userDao.findUserById(3));
+            food2.setUser(userDao.findUserById(3));
+            food3.setUser(userDao.findUserById(2));
+            food4.setUser(userDao.findUserById(3));
+            food5.setUser(userDao.findUserById(2));
+            food6.setUser(userDao.findUserById(3));
+            food7.setUser(userDao.findUserById(1));
+
 
             foodDao.save(food1);
             foodDao.save(food2);

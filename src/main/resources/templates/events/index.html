@@ -9,7 +9,8 @@
     <div class="container">
         <div class="col-6 text-center eventCard" th:each="event : ${events}">
             <a th:href="@{/events/{id} (id = ${event.id})}"><h1 th:text="${event.name}"></h1></a>
-            <p th:text="${event.food.name}"></p>
+            <p>Serving: <span th:text="${event.food.name}"></span></p>
+            <p>When:  <span th:text="${event.eventDate}"></span></p>
         </div>
     </div>
 
