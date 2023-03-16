@@ -44,9 +44,12 @@ navbar-brand {
     font-size: 42px;
     font-weight: bolder;
     background-color: #EBD396;
-    width: 500px;
+    width: 450px;
     margin-right: auto;
     margin-left: auto;
+    padding: .25em;
+    border-radius: .5em;
+    border: #21152A solid 1px;
 }
 
 .landingCard {
@@ -64,11 +67,18 @@ navbar-brand {
     width: 100%;
     object-fit: cover;
 }
+.landing-text{
+    color: #f4f9f7;
+}
 .fa-solid, .fas{
     font-weight: 900;
     font-size: 7em;
     padding-left: 0.2em;
     padding-top: 0.2em;
+    color: #f4f9f7;
+}
+.shield2{
+    color: #EBD396;
 }
 
 p.link{
@@ -76,8 +86,10 @@ p.link{
 }
 
 .landingBoxes {
+    padding-top: .4em;
     background-color: #21152A;
-    color: #f4f9f7;
+    /*color: #f4f9f7;*/
+    border-radius: 1em;
 }
 /*Landing Page*/
 
