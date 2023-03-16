@@ -16,9 +16,9 @@
 <nav th:fragment="navbar" class=" nb navbar  navbar-expand-log  mb-2">
   <div class="container-fluid">
     <a href="/" class="navbar-brand DK-logo">DinnerKnight</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+    <button class="navbar-toggler but-border" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="questButton">Click for Quests</span>
+      <span class="" role="button" ><i class="fa  fa-lg  fa-bars" aria-hidden="true" style="color:#EBD396"></i></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -47,7 +47,7 @@
           <a class="nav-link" href="/login">Login</a>
         </li>
         <li class="nav-link"><form sec:authorize="isAuthenticated()" class="ms-auto d-flex" th:action="@{/logout}" th:method="POST">
-          <input type="submit" value="logout">
+          <input type="submit" value="logout" class="submitButton">
         </form></li>
       </ul>
     </div>

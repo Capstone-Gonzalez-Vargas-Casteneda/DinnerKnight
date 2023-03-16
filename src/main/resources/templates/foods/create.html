@@ -6,18 +6,18 @@
 <nav th:replace="~{partials :: navbar}"></nav>
 
 <main class="container">
-    <h1>Add a dish!</h1>
+    <h1 class="pageHeaderText">Add a dish!</h1>
     <form th:action="@{/foods/save}" th:method="post" th:object="${food} ">
-        <div class="mb-3">
-            <label for="foodName" class="form-label">Food Name: </label>
+        <div class="mb-3 register-form">
+            <label for="foodName" class="form-label ">Food Name: </label>
             <input type="text" name="foodName" id="foodName" class="form-control" th:field="*{name}">
             <label for="ingredients" class="form-label">Ingredients needed: </label>
             <input type="text" name="ingredients" id="ingredients" class="form-control" th:field="*{ingredients}">
             <label for="instruction" class="form-label">Instructions to follow: </label>
             <input type="text" name="instruction" id="instruction" class="form-control" th:field="*{instructions}">
             <input type="hidden" name="user" th:field="*{id}" value="">
+            <button class="submitButton"> Create New Event!</button>
         </div>
-        <button class="btn w-100"> Add your recipe!</button>
     </form>
 </main>
 <div th:replace="partials :: foot-script"></div>
